@@ -1,0 +1,23 @@
+06:01:18.901 | Info | ({}) | 
+06:01:18.890 | Info | '/transaction/testapi' | 
+06:01:24.171 | Info | '/transaction/testapi' | 
+06:02:08.215 | Info | '/transaction/testapi' | 
+06:02:08.219 | Info | ({}) | 
+06:04:08.514 | Info | '/transaction/testapi' | 
+06:04:08.527 | Info | ({}) | 
+06:04:10.211 | Info | '/transaction/testapi' | 
+06:04:10.214 | Info | ({}) | 
+06:05:43.943 | Info | '/transaction/testapi' | 
+07:30:44.345 | Info | '/transaction/NetworkType' | 
+07:30:45.258 | Info | ({}) | 
+07:33:03.856 | Info | '/transaction/NetworkType' | 
+07:33:04.284 | Info | ({'message':'Column \'name\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'name\' cannot be null'}) | 
+07:33:57.343 | Info | '/transaction/NetworkType' | 
+07:33:57.552 | Info | ({'message':'Column \'name\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'name\' cannot be null'}) | 
+07:33:58.996 | Info | '/transaction/NetworkType' | 
+07:33:59.001 | Info | ({'message':'Column \'name\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'name\' cannot be null'}) | 
+07:34:12.638 | Info | '/transaction/NetworkType' | 
+07:34:12.834 | Info | ({'message':'Column \'name\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'name\' cannot be null'}) | 
+07:36:32.562 | Info | '/transaction/NetworkType' | 
+07:45:45.095 | Info | '/transaction/NetworkType' | 
+07:47:45.495 | Info | '/transaction/getNetworkType' | 
