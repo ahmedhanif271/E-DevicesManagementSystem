@@ -6,9 +6,9 @@ class CreateNetworkType
     {
            // message.NAME=req.body.name;  
             //message.NAME=req.query.name; 
-            message.TYPENAME = req.body.typeName;
-            message.TYPEIP = req.body.typeIp;
-            message.TYPEPORT = req.body.typePort;
+            message.NAME = req.body.name;
+            message.IP_ADDRESS = req.body.ip_address;
+            message.PORT = req.body.port;
 
            
     }

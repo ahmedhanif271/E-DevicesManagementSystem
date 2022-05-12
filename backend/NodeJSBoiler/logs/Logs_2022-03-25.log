@@ -1,0 +1,21 @@
+22:27:49.374 | Info | '/transaction/getCustomerType' | 
+23:24:23.599 | Info | '/transaction/getCustomerType' | 
+23:26:49.611 | Info | '/transaction/getCustomerType' | 
+23:27:12.623 | Info | '/transaction/getCustomerType' | 
+23:28:59.633 | Info | '/transaction/getCustomerType' | 
+23:29:03.376 | Info | '/transaction/getCustomerType' | 
+23:29:46.264 | Info | '/transaction/getCustomerType' | 
+23:31:04.865 | Info | '/transaction/getCustomerType' | 
+23:31:17.120 | Info | '/transaction/getCustomerType' | 
+23:32:00.539 | Info | '/transaction/getCustomerType' | 
+23:32:46.812 | Info | '/transaction/getCustomerType' | 
+23:32:51.769 | Info | '/transaction/getCustomerType' | 
+23:50:33.952 | Info | '/transaction/getCustomerType' | 
+23:50:49.312 | Info | '/transaction/createCustomerType' | 
+23:50:49.321 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+23:52:07.278 | Info | '/transaction/createCustomerType' | 
+23:52:07.284 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+23:54:55.344 | Info | '/transaction/createCustomerType' | 
+23:54:55.354 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+23:58:31.644 | Info | '/transaction/createCustomerType' | 
+23:58:31.649 | Info | ({'message':'Column \'entity_Id\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'entity_Id\' cannot be null'}) | 

@@ -24,7 +24,7 @@ import {
   useMatch
 } from "react-router-dom";
 import { CustomerSetup } from './CustomerSetup';
-import { CustomerProfile1, CustomerProfile2 } from './CustomerProfile';
+import { CustomerProfile } from './CustomerProfile';
 import { CustomerList } from './CustomerList';
 
 export function CustomerManagement() {
@@ -33,8 +33,7 @@ export function CustomerManagement() {
     <Routes >
     <Route path={`/`} element={ <CustomerList />} />
     <Route path={`add/`} element={ <CustomerSetup />} />
-    <Route path={`profile/123/`} element={ <CustomerProfile1 />} />
-    <Route path={`profile/124/`} element={ <CustomerProfile2 />} />
+    <Route path={`details/:ID`} element={ <CustomerProfile/>} />
   </Routes>
   );
 }

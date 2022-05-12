@@ -1,0 +1,21 @@
+05:20:33.983 | Info | '/api/user/login' | 
+05:48:45.208 | Info | '/api/user/login' | 
+05:48:45.211 | Info | ({'message':'connect ECONNREFUSED 127.0.0.1:3306','code':'ECONNREFUSED','errno':-4078,'sqlState':undefined,'sqlMessage':undefined}) | 
+05:48:51.403 | Info | '/api/user/login' | 
+05:48:51.406 | Info | ({'message':'connect ECONNREFUSED 127.0.0.1:3306','code':'ECONNREFUSED','errno':-4078,'sqlState':undefined,'sqlMessage':undefined}) | 
+05:49:04.288 | Info | '/api/user/login' | 
+05:49:04.291 | Info | ({'message':'connect ECONNREFUSED 127.0.0.1:3306','code':'ECONNREFUSED','errno':-4078,'sqlState':undefined,'sqlMessage':undefined}) | 
+05:49:15.362 | Info | '/api/user/login' | 
+05:49:15.365 | Info | ({'message':'connect ECONNREFUSED 127.0.0.1:3306','code':'ECONNREFUSED','errno':-4078,'sqlState':undefined,'sqlMessage':undefined}) | 
+05:49:42.203 | Info | '/api/user/login' | 
+05:49:42.207 | Info | ({'message':'connect ECONNREFUSED 127.0.0.1:3306','code':'ECONNREFUSED','errno':-4078,'sqlState':undefined,'sqlMessage':undefined}) | 
+05:50:10.740 | Info | '/api/user/login' | 
+05:50:10.745 | Info | ({'message':'connect ECONNREFUSED 127.0.0.1:3306','code':'ECONNREFUSED','errno':-4078,'sqlState':undefined,'sqlMessage':undefined}) | 
+05:50:37.504 | Info | '/api/user/login' | 
+11:33:16.163 | Info | '/transaction/createCustomerType' | 
+11:33:16.518 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+11:33:39.090 | Info | '/transaction/createCustomerType' | 
+11:33:39.098 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+11:34:37.253 | Info | '/transaction/createCustomerType' | 
+11:34:37.263 | Info | ({'message':'Column \'entity_Id\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'entity_Id\' cannot be null'}) | 
+11:35:42.744 | Info | '/transaction/createCustomerType' | 

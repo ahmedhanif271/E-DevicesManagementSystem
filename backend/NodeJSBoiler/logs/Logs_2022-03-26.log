@@ -1,0 +1,55 @@
+00:03:52.422 | Info | '/transaction/createCustomerType' | 
+00:03:52.428 | Info | ({'message':'Column \'entity_Id\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'entity_Id\' cannot be null'}) | 
+00:04:36.219 | Info | '/transaction/createCustomerType' | 
+00:04:36.225 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:05:11.796 | Info | '/transaction/createCustomerType' | 
+00:07:16.993 | Info | '/transaction/createCustomerType' | 
+00:07:17.000 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:08:55.003 | Info | '/transaction/getCustomerType' | 
+00:09:08.132 | Info | '/transaction/createCustomerType' | 
+00:09:08.139 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:11:38.755 | Info | '/transaction/createCustomerType' | 
+00:11:38.763 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:12:15.266 | Info | '/transaction/createCustomerType' | 
+00:14:18.479 | Info | '/transaction/createCustomerType' | 
+00:14:18.487 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:17:20.021 | Info | '/transaction/getCustomerType' | 
+00:17:33.571 | Info | '/transaction/createCustomerType' | 
+00:17:33.577 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:18:55.917 | Info | '/transaction/createCustomerType' | 
+00:18:55.923 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:19:42.617 | Info | '/transaction/createCustomerType' | 
+00:19:42.622 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:19:44.923 | Info | '/transaction/createCustomerType' | 
+00:19:44.933 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:23:00.408 | Info | '/transaction/createCustomerType' | 
+00:23:09.230 | Info | '/transaction/getCustomerType' | 
+00:23:34.525 | Info | '/transaction/createCustomerType' | 
+00:23:37.085 | Info | '/transaction/getCustomerType' | 
+00:26:01.384 | Info | '/transaction/createCustomerType' | 
+00:46:19.612 | Info | '/transaction/getCustomerType' | 
+00:46:50.516 | Info | '/transaction/getCustomerType' | 
+00:46:53.901 | Info | '/transaction/createCustomerType' | 
+00:46:53.910 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:47:04.468 | Info | '/transaction/createCustomerType' | 
+00:50:20.702 | Info | '/transaction/getCustomerType' | 
+00:50:27.293 | Info | '/transaction/getCustomerType' | 
+00:51:22.262 | Info | '/transaction/createCustomerType' | 
+00:51:22.266 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:51:22.326 | Info | '/transaction/getCustomerType' | 
+00:52:37.799 | Info | '/transaction/getCustomerType' | 
+01:10:49.541 | Info | '/transaction/createDeviceType' | 
+01:28:38.961 | Info | '/transaction/getCustomerType' | 
+01:29:42.934 | Info | '/transaction/getDeviceType' | 
+01:39:24.015 | Info | '/transaction/getDeviceType' | 
+01:39:29.799 | Info | '/transaction/getDeviceType' | 
+01:40:39.790 | Info | '/transaction/getDeviceType' | 
+01:43:28.755 | Info | '/transaction/getDeviceType' | 
+01:45:08.529 | Info | '/transaction/getDeviceType' | 
+01:45:46.429 | Info | '/transaction/getDeviceType' | 
+01:45:55.691 | Info | '/transaction/getDeviceType' | 
+01:46:15.221 | Info | '/transaction/getDeviceType' | 
+01:48:07.820 | Info | '/transaction/getDeviceType' | 
+01:51:16.098 | Info | '/transaction/getDeviceType' | 
+01:51:35.580 | Info | '/transaction/createDeviceType' | 
+01:51:35.613 | Info | '/transaction/getDeviceType' | 

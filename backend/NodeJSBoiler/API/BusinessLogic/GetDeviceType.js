@@ -1,4 +1,4 @@
-const  Model  = require("../Modules/DeviceType");
+const  Model  = require("../BusinessLogic/Modules/DeviceType");
 
 class GetDeviceType
 {
@@ -15,13 +15,14 @@ class GetDeviceType
     async process(message)
     {
         message.LIST = await Model.getDeviceType(message)
-
+        message.STATUS="Success";
 
     }
     async output(res,message)
     {
         res.responseBody.message = "Device Type added "
         res.responseBody.list = message.LIST
+        res.status=message.STATUS;
 
     
     }

@@ -1,0 +1,13 @@
+10:04:54.253 | Info | '/transaction/getCustomerType' | 
+10:05:05.122 | Info | '/transaction/getCustomersDetails' | 
+10:12:53.370 | Info | '/transaction/getCustomerType' | 
+10:13:02.395 | Info | '/transaction/getDeviceType' | 
+10:13:03.632 | Info | '/transaction/getCustomerType' | 
+10:13:06.322 | Info | '/transaction/getCustomersDetails' | 
+10:13:20.275 | Info | '/transaction/getCustomerType' | 
+10:13:25.129 | Info | '/transaction/getCustomersDetails' | 
+10:14:06.807 | Info | '/transaction/getDeviceType' | 
+10:14:08.677 | Info | '/transaction/getNetworkType' | 
+10:14:10.418 | Info | '/transaction/getRolesType' | 
+10:14:49.447 | Info | '/transaction/createRolesType' | 
+10:14:49.453 | Info | '/transaction/getRolesType' | 

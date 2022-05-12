@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { GridButton1, GridButton2 } from '../../CustomComponents/GridButton';
 
 import {
   MDBNavbar,
@@ -26,55 +25,42 @@ import {
 } from 'mdb-react-ui-kit';
 
 import DataTable from 'react-data-table-component';
-
+import { getToken, loginAsync } from '../../reducers/AuthSlice'
+import { CustomerDetails } from './CustomerSetup';
+import { GetCustomerList} from '../../api/CustomerProfileApis';
+import { GetCustomerListAsync, getCustomerList} from '../../reducers/CustomerProfileSlice'
+import { Link } from 'react-router-dom';
 
 const columns = [
   {
     name: 'Name',
-    selector: row => row.name,
+    selector: row => row.username,
   },
   {
-    name: 'Devices',
-    selector: row => row.deviceCount,
-  },
+    name: 'Password',
+    selector: row => row.password,
+  }, 
   {
-    name: 'Status',
-    selector: row => row.status,
-  },
+    name: 'CNIC',
+    selector: row => row.cnic,
+  }, 
   {
-    name: 'Payment Status',
-    selector: row => row.paymentStatus,
-  },
-  {
+    //row.action
     name: 'Actions',
-    selector: row => row.action,
+    selector: row => <Link to={"/home/customers/details/" + row.id}><MDBBtn color='success' size='sm'>Details</MDBBtn> </Link>,
   },
-];
-
-const data = [
-  {
-    id: 1,
-    name: 'Abdul Rafay',
-    deviceCount: '3',
-    status: 'Active',
-    paymentStatus: <MDBBadge className='mx-2' color='danger'>
-      Not Paid
-    </MDBBadge>,
-    action: <GridButton1 href="/home/customers/profile/123" iconName="edit" color="green" />
-  },
-  {
-    id: 2,
-    name: 'Ahmed Hanif',
-    deviceCount: '11',
-    status: 'Active',
-    paymentStatus: <MDBBadge className='mx-2' color='success'>
-      Paid
-    </MDBBadge>,
-    action: <GridButton2 href="/home/customers/profile/124" iconName="edit" color="green" />
-  }
+  
+  
 ]
 export function CustomerList() {
+const dispatch = useDispatch();
+  const token = useSelector(getToken);
 
+  useEffect(() => {
+    dispatch(GetCustomerListAsync({token }));
+  }, []);
+  const data = useSelector(getCustomerList);
+  console.log(data)
   return (
     <div className="p-4 text-start ">
       <MDBBreadcrumb>
@@ -89,7 +75,7 @@ export function CustomerList() {
       <MDBCard alignment='center' >
         <MDBCardHeader className="text-start"><h5> Customer Management</h5></MDBCardHeader>
         <div className="w-100 d-flex p-4 justify-content-end" >
-          <MDBBtn href='/home/customers/add' >Add New</MDBBtn>
+        <Link to={"/home/customers/add"}><MDBBtn href='/home/customers/add' >Add New</MDBBtn></Link>
         </div>
         <MDBRow>
           <MDBCardBody>

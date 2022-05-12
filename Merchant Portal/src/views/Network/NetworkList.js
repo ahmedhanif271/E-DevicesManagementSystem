@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import {
@@ -18,85 +18,59 @@ import {
   MDBCardText,
   MDBBtn,
   MDBInput,
-  MDBCardHeader
+  MDBCardHeader,
+  MDBBadge,
+  MDBBreadcrumb,
+  MDBBreadcrumbItem
 } from 'mdb-react-ui-kit';
 
 import DataTable from 'react-data-table-component';
+import { getToken, loginAsync } from '../../reducers/AuthSlice'
+import { NetworkDetails } from './NetworkSetup';
+import { GetNetworkList} from '../../api/NetworkApis';
+import { GetNetworkListAsync, getNetworkList} from '../../reducers/NetworkSlice'
+import { Link } from 'react-router-dom';
 
-import { NetworkSetup } from './NetworkSetup';
+
 const columns = [
   {
-    name: 'Network ID',
-    selector: row => row.networkId,
+    name: 'Name',
+    selector: row => row.name,
   },
   {
-    name: 'IP address',
-    selector: row => row.ipAddress,
+    name: 'IP',
+    selector: row => row.ip_address,
   },
   {
-    name: 'Port',
+    name: 'Port Number',
     selector: row => row.port,
-  },
-  {
-    name: 'Actions',
-    selector: row => row.action,
-  },
-];
-
-const data = [
-  {
-    id: 1,
-    networkId: '3467',
-    ipAddress:'213.233.2.62',
-    port:'36796',
-    action: <MDBBtn href='/home/network-config/add' >Add New</MDBBtn>
-  },
-  {
-    id: 2,
-    networkId: '5902',
-    ipAddress:'175.189.191.144',
-    port:'44526',
-  },
-  {
-    id: 3,
-    networkId: '1111',
-    ipAddress:'187.123.89.123',
-    port:'36796',
-  },
-  {
-    id: 4,
-    networkId: '1902',
-    ipAddress:'161.12.165.193',
-    port:'44526',
-  },
-  {
-    id: 5,
-    networkId: '1555',
-    ipAddress:'23.172.81.10',
-    port:'36796',
-  },
-  {
-    id: 6,
-    networkId: '9000',
-    ipAddress:'116.112.35.208',
-    port:'44526',
-  },
-  {
-    id: 7,
-    networkId: '2341',
-    ipAddress:'102.200.117.69',
-    port:'36796',
-  },
+  }
+  
 ]
 export function NetworkList() {
+const dispatch = useDispatch();
+  const token = useSelector(getToken);
 
+  useEffect(() => {
+    dispatch(GetNetworkListAsync({token }));
+  }, []);
+  const data = useSelector(getNetworkList);
+  console.log(data)
   return (
     <div className="p-4 text-start ">
-  
+      <MDBBreadcrumb>
+        <MDBBreadcrumbItem>
+          <a>Home</a>
+        </MDBBreadcrumbItem>
+        <MDBBreadcrumbItem active>
+          <a >Network List</a>
+        </MDBBreadcrumbItem>
+
+      </MDBBreadcrumb>
       <MDBCard alignment='center' >
-      <MDBCardHeader className="text-start"><h5> Networks List</h5></MDBCardHeader>
+        <MDBCardHeader className="text-start"><h5> Network Management</h5></MDBCardHeader>
         <div className="w-100 d-flex p-4 justify-content-end" >
-          <MDBBtn href='/home/network-config/add' >Add New</MDBBtn>
+        <Link to={"/home/network-config/add"}><MDBBtn>Add New</MDBBtn></Link>
         </div>
         <MDBRow>
           <MDBCardBody>
@@ -104,7 +78,7 @@ export function NetworkList() {
               pagination="true"
               columns={columns}
               data={data}
-           
+
             />
           </MDBCardBody>
         </MDBRow>

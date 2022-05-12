@@ -6,8 +6,8 @@ class CustomerType
     async createCustomerType(message)
     {
     
-        var results=await client.Query("Insert into customers (username,password,entity_Id) values(?,?,?)",
-        [message.USERNAME, message.PASSWORD, message.ENTITYID]);
+        var results=await client.Query("Insert into customers (username,password,cnic,phone,address,dob,gender,userId) values(?,?,?,?,?,?,?,?)",
+        [message.USERNAME, message.PASSWORD, message.CNIC, message.PHONE, message.ADDRESS, message.DOB, message.GENDER, message.USERID ]);
         
     }
     async getCustomerType(message)

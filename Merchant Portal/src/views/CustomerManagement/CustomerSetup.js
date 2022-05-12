@@ -23,9 +23,31 @@ import {
   MDBBreadcrumbItem
 } from 'mdb-react-ui-kit';
 
+import { getToken, loginAsync } from '../../reducers/AuthSlice'
+import { createNewProfileAsync } from '../../reducers/CustomerProfileSlice'
+import { Link } from 'react-router-dom';
 
+export const CustomerSetup = (props) => {
+  const token = useSelector(getToken);
+  const [formData, setFormData] = useState({});
+  const dispatch = useDispatch();
+  const handleChange = event => {
+    var data = formData;
+    data[event.target.name] = event.target.value;
+    setFormData(data);
+  }
+  const handleDate = event => {
+    var data = formData;
 
-export function CustomerSetup() {
+    data[event.target.name] = new Date(event.target.value);
+    setFormData(data);
+  }
+
+  const onSubmit = () => {
+
+    dispatch(createNewProfileAsync({ formData, token }));
+
+  }
 
   return (
     <div className="p-4 text-start w-100">
@@ -52,67 +74,51 @@ export function CustomerSetup() {
                   <MDBRow>
                     <h5>Customer Information</h5>
                     <MDBCol lg="4" className="py-1">
-                      <MDBInput label="Name" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
+                    <MDBInput label="Name" icon="envelope" type="text" error="wrong"
+                        success="right" name="username" value={formData.username} onChange={handleChange} />
                     </MDBCol>
                     <MDBCol lg="4" className="py-1">
-                      <MDBInput label="ID" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
+                    <MDBInput label="Password" icon="envelope" type="text" error="wrong"
+                        success="right" name="password" value={formData.password} onChange={handleChange} />
                     </MDBCol>
 
                     <MDBCol lg="4" className="py-1">
-                      <MDBInput label="CNIC" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                  
-                    <MDBCol lg="4" className="py-1">
-                      <MDBInput label="Phone" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
-                      <MDBInput label="Meter ID" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
-                      <MDBInput label="Meter Type" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
-                      <MDBInput label="Ip address" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
+              <MDBInput label="CNIC" icon="envelope" group type="text" validate error="wrong"
+                success="right" name="cnic" value={formData.cnic} onChange={handleChange}/>
+            </MDBCol>
 
-                      <MDBInput label="Address" icon="envelope" type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
-                      <select className="form-select">
-                        <option>Select Gender</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
-                        <option value="3">Others</option>
-                      </select>
-                    </MDBCol>
-                    
-                   
-                  </MDBRow>
-                  <hr />                
-                  <hr />
-                  <MDBRow>
-                    <h5>Documents</h5>
-                    <MDBCol lg="4" className="py-1">
-                      Customer picture: <input type="file" />
-                    </MDBCol>
-              
-                    <MDBCol lg="4" className="py-1">
-                     Customer CNIC: <input type="file" />
-                    </MDBCol>
+            <MDBCol lg="4" className="py-1">
+              <MDBInput label="Phone" icon="envelope" group type="text" validate error="wrong"
+                success="right" name="phone" value={formData.phone} onChange={handleChange}/>
+            </MDBCol>
+            <MDBCol lg="4" className="py-1">
+              <MDBInput label="Address" icon="envelope" group type="text" validate error="wrong"
+                success="right" name="address"  value={formData.address} onChange={handleChange}/>
+            </MDBCol>
+      
+            <MDBCol lg="4" className="py-1">
+
+            <MDBInput label="Date of Birth" icon="envelope" type="date" error="wrong"
+                        success="right" name="dob" onChange={handleChange} />
+
+            </MDBCol>
+            <MDBCol lg="4" className="py-1">
+            <select className="form-select" name="gender" value={formData.gender} onChange={handleChange} >
+                <option>Select Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="O">Others</option>
+              </select>
+            </MDBCol>
+            <MDBCol lg="4" className="py-1">
+              <MDBInput label="User ID" icon="envelope" group type="text" validate error="wrong"
+                success="right" name="userId" value={formData.userId} onChange={handleChange}/>
+            </MDBCol>
                   
-                  </MDBRow>
+  </MDBRow> 
                 </div>
                 <div className="text-end w-100">
-                  <MDBBtn color="danger" className="mx-2 my-5" href="/home/customers">Close</MDBBtn><MDBBtn className="mx-2  my-5" href="/home/customers">Add</MDBBtn>
+                <Link to={"/home/customers"}> <MDBBtn color="danger" className="mx-2 my-5">Close</MDBBtn></Link><Link to={"/home/customers"}><MDBBtn type={"button"} className="mx-2  my-5" onClick={onSubmit}>Add</MDBBtn></Link>
                 </div>
               </form>
 

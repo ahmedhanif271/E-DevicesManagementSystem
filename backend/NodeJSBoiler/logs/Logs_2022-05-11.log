@@ -1,0 +1,32 @@
+22:55:06.377 | Info | '/api/user/login' | 
+22:55:06.545 | Info | ({'message':'connect ECONNREFUSED 127.0.0.1:3306','code':'ECONNREFUSED','errno':-4078,'sqlState':undefined,'sqlMessage':undefined}) | 
+22:55:10.673 | Info | '/api/user/login' | 
+22:55:10.677 | Info | ({'message':'connect ECONNREFUSED 127.0.0.1:3306','code':'ECONNREFUSED','errno':-4078,'sqlState':undefined,'sqlMessage':undefined}) | 
+22:55:26.836 | Info | '/api/user/login' | 
+22:55:26.841 | Info | ({'message':'connect ECONNREFUSED 127.0.0.1:3306','code':'ECONNREFUSED','errno':-4078,'sqlState':undefined,'sqlMessage':undefined}) | 
+22:55:47.292 | Info | '/api/user/login' | 
+22:56:01.055 | Info | '/transaction/getCustomerType' | 
+22:56:07.035 | Info | '/transaction/getCustomersDetails' | 
+23:08:54.111 | Info | '/api/user/login' | 
+23:08:55.743 | Info | '/api/user/login' | 
+23:09:05.450 | Info | '/api/user/login' | 
+23:09:10.437 | Info | '/transaction/getCustomerType' | 
+23:12:07.199 | Info | '/transaction/getCustomerType' | 
+23:15:39.586 | Info | '/transaction/getCustomerType' | 
+23:17:16.799 | Info | '/transaction/getCustomerType' | 
+23:21:59.931 | Info | '/transaction/getDeviceType' | 
+23:22:01.794 | Info | '/transaction/getNetworkType' | 
+23:22:07.808 | Info | '/transaction/getCustomerType' | 
+23:23:54.745 | Info | '/transaction/getCustomerType' | 
+23:23:57.006 | Info | '/transaction/getDeviceType' | 
+23:24:00.755 | Info | '/transaction/getNetworkType' | 
+23:24:03.205 | Info | '/transaction/getDeviceType' | 
+23:41:50.187 | Info | '/transaction/getDeviceType' | 
+23:44:49.793 | Info | '/transaction/getDeviceType' | 
+23:45:21.698 | Info | '/transaction/getDeviceType' | 
+23:45:33.697 | Info | '/transaction/getDeviceType' | 
+23:45:48.682 | Info | '/transaction/getDeviceType' | 
+23:47:10.390 | Info | '/transaction/getDeviceType' | 
+23:51:52.367 | Info | '/transaction/getDeviceType' | 
+23:51:58.628 | Info | '/transaction/getDeviceType' | 
+23:57:57.396 | Info | '/transaction/getDeviceType' | 

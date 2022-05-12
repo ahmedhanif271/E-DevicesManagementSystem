@@ -15,8 +15,20 @@ module.exports = {
         controller: "CreateNetworkType",
         allowedMethod: ['POST']
     },
+    "/transaction/getCustomersDetails": {
+        controller: "GetCustomersDetails",
+        allowedMethod: ['GET']
+    },
     "/transaction/getNetworkType": {
         controller: "GetNetworkType",
+        allowedMethod: ['GET']
+    },
+    "/transaction/createRolesType": {
+        controller: "CreateRolesType",
+        allowedMethod: ['POST']
+    },
+    "/transaction/getRolesType": {
+        controller: "GetRolesType",
         allowedMethod: ['GET']
     },
     "/transaction/createDeviceType": {

@@ -17,15 +17,12 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBBtn,
-  MDBInput,
-
+  MDBInput
 } from 'mdb-react-ui-kit';
-
 import {
   BrowserRouter as Router, Routes, Route, Link, useParams,
   useMatch
 } from "react-router-dom";
-
 import { MeterSetup } from './MeterSetup';
 import { MeterList } from './MeterList';
 

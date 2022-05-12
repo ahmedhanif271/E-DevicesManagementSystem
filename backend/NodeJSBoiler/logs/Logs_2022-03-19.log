@@ -1,0 +1,40 @@
+00:02:42.000 | Info | '/transaction/createCustomerType' | 
+00:02:42.131 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:04:36.712 | Info | '/transaction/createCustomerType' | 
+00:04:36.717 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:05:48.735 | Info | '/transaction/createCustomerType' | 
+00:05:48.739 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:10:23.911 | Info | '/transaction/createCustomerType' | 
+00:10:23.917 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:10:45.671 | Info | '/transaction/createCustomerType' | 
+00:10:45.675 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:11:23.917 | Info | '/transaction/createCustomerType' | 
+00:11:23.933 | Info | ({'message':'Column \'entity_Id\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'entity_Id\' cannot be null'}) | 
+00:11:52.838 | Info | '/transaction/createCustomerType' | 
+00:11:52.841 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:12:36.328 | Info | '/transaction/createCustomerType' | 
+00:12:36.333 | Info | ({'message':'Column \'password\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'password\' cannot be null'}) | 
+00:14:00.782 | Info | '/transaction/createCustomerType' | 
+00:14:00.951 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+00:16:10.141 | Info | '/transaction/createCustomerType' | 
+00:27:13.004 | Info | '/transaction/getCustomerType' | 
+02:53:30.120 | Info | '/api/user/login' | 
+02:53:30.382 | Info | ({'message':'Table \'edms.users\' doesn\'t exist','code':'ER_NO_SUCH_TABLE','errno':1146,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist'}) | 
+02:53:46.996 | Info | '/api/user/login' | 
+02:53:47.014 | Info | ({'message':'Table \'edms.users\' doesn\'t exist','code':'ER_NO_SUCH_TABLE','errno':1146,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist'}) | 
+02:55:04.436 | Info | '/api/user/login' | 
+02:55:04.449 | Info | ({'message':'Table \'edms.users\' doesn\'t exist','code':'ER_NO_SUCH_TABLE','errno':1146,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist'}) | 
+02:55:19.743 | Info | '/api/user/login' | 
+02:55:19.755 | Info | ({'message':'Table \'edms.users\' doesn\'t exist','code':'ER_NO_SUCH_TABLE','errno':1146,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist'}) | 
+02:56:08.596 | Info | '/api/user/login' | 
+02:56:08.601 | Info | ({'message':'Table \'edms.users\' doesn\'t exist','code':'ER_NO_SUCH_TABLE','errno':1146,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist'}) | 
+02:56:45.770 | Info | '/api/user/login' | 
+02:56:45.780 | Info | ({'message':'Table \'edms.users\' doesn\'t exist','code':'ER_NO_SUCH_TABLE','errno':1146,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist'}) | 
+02:57:00.548 | Info | '/api/user/login' | 
+02:57:00.553 | Info | ({'message':'Table \'edms.users\' doesn\'t exist','code':'ER_NO_SUCH_TABLE','errno':1146,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist'}) | 
+03:00:20.740 | Info | '/api/user/login' | 
+03:03:55.711 | Info | '/api/user/login' | 
+11:25:09.783 | Info | '/api/user/login' | 
+11:25:44.248 | Info | '/api/user/login' | 
+11:51:24.017 | Info | '/api/user/login' | 
+11:51:44.123 | Info | '/api/user/login' | 

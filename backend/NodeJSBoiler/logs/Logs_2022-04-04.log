@@ -1,0 +1,52 @@
+03:31:35.769 | Info | '/api/user/login' | 
+03:31:42.454 | Info | '/transaction/getCustomerType' | 
+03:31:47.756 | Info | '/transaction/getCustomersDetails' | 
+03:32:22.962 | Info | '/transaction/createCustomerType' | 
+03:32:23.008 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+03:38:25.474 | Info | '/transaction/getCustomerType' | 
+03:41:14.188 | Info | '/transaction/getCustomerType' | 
+03:41:20.935 | Info | '/transaction/getCustomerType' | 
+03:45:03.488 | Info | '/transaction/getCustomerType' | 
+03:46:08.349 | Info | '/transaction/createCustomerType' | 
+03:46:08.399 | Info | '/transaction/getCustomerType' | 
+03:49:51.245 | Info | '/transaction/getCustomerType' | 
+03:50:40.874 | Info | '/transaction/createCustomerType' | 
+03:50:40.913 | Info | '/transaction/getCustomerType' | 
+03:55:06.369 | Info | '/transaction/getCustomerType' | 
+03:55:43.541 | Info | '/transaction/createCustomerType' | 
+03:55:43.584 | Info | ({'message':'Column \'cnic\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'cnic\' cannot be null'}) | 
+03:55:43.608 | Info | '/transaction/getCustomerType' | 
+03:55:57.148 | Info | '/transaction/getCustomerType' | 
+03:56:36.433 | Info | '/transaction/createCustomerType' | 
+03:56:36.448 | Info | ({'message':'Column \'cnic\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'cnic\' cannot be null'}) | 
+03:56:36.521 | Info | '/transaction/getCustomerType' | 
+03:59:30.706 | Info | '/transaction/getCustomerType' | 
+03:59:41.373 | Info | '/transaction/getCustomerType' | 
+04:00:22.326 | Info | '/transaction/createCustomerType' | 
+04:00:22.346 | Info | ({'message':'Column \'cnic\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'cnic\' cannot be null'}) | 
+04:00:22.429 | Info | '/transaction/getCustomerType' | 
+04:01:17.088 | Info | '/transaction/getCustomerType' | 
+04:01:28.106 | Info | '/transaction/getCustomerType' | 
+04:01:30.083 | Info | '/transaction/getCustomerType' | 
+04:01:35.089 | Info | '/transaction/getCustomerType' | 
+04:01:59.814 | Info | '/transaction/getCustomerType' | 
+04:02:41.798 | Info | '/transaction/createCustomerType' | 
+04:02:41.855 | Info | ({'message':'Column \'cnic\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'cnic\' cannot be null'}) | 
+04:02:41.877 | Info | '/transaction/getCustomerType' | 
+09:31:20.592 | Info | '/transaction/createCustomerType' | 
+10:05:33.738 | Info | '/transaction/createCustomerType' | 
+10:12:47.776 | Info | '/api/user/login' | 
+10:12:49.783 | Info | '/transaction/getCustomerType' | 
+10:13:28.656 | Info | '/transaction/createCustomerType' | 
+10:13:28.667 | Info | ({'message':'Column \'cnic\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'cnic\' cannot be null'}) | 
+10:13:28.684 | Info | '/transaction/getCustomerType' | 
+10:18:03.459 | Info | '/transaction/getCustomerType' | 
+10:21:09.041 | Info | '/transaction/getCustomerType' | 
+10:26:45.956 | Info | '/transaction/getCustomerType' | 
+10:27:23.626 | Info | '/transaction/getCustomerType' | 
+10:28:28.543 | Info | '/transaction/getCustomerType' | 
+10:29:03.601 | Info | '/transaction/createCustomerType' | 
+10:29:03.621 | Info | '/transaction/getCustomerType' | 
+10:34:52.838 | Info | '/transaction/getCustomerType' | 
+10:35:35.656 | Info | '/transaction/createCustomerType' | 
+10:35:35.691 | Info | '/transaction/getCustomerType' | 

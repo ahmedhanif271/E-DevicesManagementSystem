@@ -1,0 +1,36 @@
+00:41:38.093 | Info | '/api/user/login' | 
+00:41:44.294 | Info | '/transaction/getCustomerType' | 
+00:41:59.842 | Info | '/transaction/getCustomersDetails' | 
+00:46:43.017 | Info | '/transaction/getCustomersDetails' | 
+00:46:49.029 | Info | '/transaction/getCustomersDetails' | 
+00:46:59.041 | Info | '/transaction/getCustomersDetails' | 
+00:55:40.176 | Info | '/transaction/getCustomerType' | 
+00:56:00.859 | Info | '/transaction/getCustomerType' | 
+00:56:10.594 | Info | '/transaction/getCustomerType' | 
+00:56:12.329 | Info | '/transaction/getCustomersDetails' | 
+00:58:35.875 | Info | '/transaction/getCustomerType' | 
+00:58:38.621 | Info | '/transaction/getCustomersDetails' | 
+02:00:01.064 | Info | '/transaction/getCustomerType' | 
+02:00:25.349 | Info | '/transaction/createCustomerType' | 
+02:00:25.362 | Info | ({'message':'Column \'cnic\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'cnic\' cannot be null'}) | 
+02:00:25.390 | Info | '/transaction/getCustomerType' | 
+02:01:39.549 | Info | '/transaction/getCustomerType' | 
+02:02:00.666 | Info | '/transaction/createCustomerType' | 
+02:02:00.690 | Info | ({'message':'Column \'cnic\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'cnic\' cannot be null'}) | 
+02:02:00.781 | Info | '/transaction/getCustomerType' | 
+02:05:43.191 | Info | '/transaction/getCustomerType' | 
+02:05:58.334 | Info | '/transaction/createCustomerType' | 
+02:05:58.372 | Info | '/transaction/getCustomerType' | 
+02:06:06.251 | Info | '/transaction/getCustomersDetails' | 
+02:19:18.240 | Info | '/transaction/getCustomerType' | 
+02:19:21.760 | Info | '/transaction/getCustomersDetails' | 
+02:20:02.013 | Info | '/transaction/createCustomerType' | 
+02:20:02.042 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:20:16.742 | Info | '/transaction/createCustomerType' | 
+02:20:16.753 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:20:18.703 | Info | '/transaction/createCustomerType' | 
+02:20:18.731 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:20:28.231 | Info | '/transaction/getCustomerType' | 
+02:20:30.706 | Info | '/transaction/getCustomersDetails' | 
+02:20:59.120 | Info | '/transaction/createCustomerType' | 
+02:20:59.139 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate, useLocation, Navigate } from 'react-router-dom';
 import background from '../../Assets/background.png';
 import bg from '../../Assets/background.png';
 
@@ -21,8 +22,22 @@ import {
   MDBBtn,
   MDBInput
 } from 'mdb-react-ui-kit';
+import { getToken, loginAsync } from '../../reducers/AuthSlice'
 
 export function Login() {
+  const token = useSelector(getToken);
+  const dispatch = useDispatch();
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  let navigate = useNavigate()
+  let location = useLocation()
+
+
+  if (token) {
+      //alert("Hello");
+      return <Navigate to={{ pathname: '/home', state: { from: location } }} />
+      // setUserName("")
+  }
 
   return (
     <div>
@@ -57,7 +72,7 @@ export function Login() {
       </MDBNavbar>
       <div
         className='p-5 text-center bg-image'
-        style={{ background: `url(${bg})`, height: "88vh", backgroundSize: 'cover'}}
+        style={{ background: `url(${bg})`, height: "84vh", backgroundSize: 'cover'}}
       >
           
         <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
@@ -67,12 +82,19 @@ export function Login() {
               <MDBCardBody>
                 <MDBCardTitle>Management Login</MDBCardTitle>
                 <MDBInput label="Username" className="mt-5 mb-2" icon="envelope" group type="email" validate error="wrong"
-                  success="right" />
+                  success="right" value={userName} onChange={(e) => {
+                    setUserName(e.target.value)
+                  }} />
                 <MDBInput label="Password" className="mb-5 mb-2" icon="envelope" group type="password" validate error="wrong"
-                  success="right" />
+                  success="right" value={password} onChange={(e) => {
+                    setPassword(e.target.value)
+                  }} />
 
 
-                <MDBBtn  href="/home">Login</MDBBtn>
+                <MDBBtn onClick={() => dispatch(loginAsync({
+                  "userName": userName,
+                  "password": password
+                }))}>Login</MDBBtn>
               </MDBCardBody>
             </MDBCard>
 

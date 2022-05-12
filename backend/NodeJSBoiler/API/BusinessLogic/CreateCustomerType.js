@@ -6,9 +6,15 @@ class CreateCustomerType
     {
            // message.NAME=req.body.name;  
             //message.NAME=req.query.name; 
-            message.USERNAME = req.body.username;
-            message.PASSWORD = req.body.password;
-           message.ENTITYID = req.body.entityId;
+           message.USERNAME = req.body.username;
+           message.PASSWORD = req.body.password;
+           message.CNIC = req.body.cnic;
+           message.PHONE = req.body.phone;
+           message.ADDRESS = req.body.address;
+           message.DOB = req.body.dob;
+           message.GENDER = req.body.gender;
+           message.USERID = req.body.userId;
+
 
            
     }

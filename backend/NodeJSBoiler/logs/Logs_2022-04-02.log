@@ -1,0 +1,262 @@
+00:01:47.506 | Info | '/transaction/getCustomerType' | 
+00:07:04.905 | Info | '/transaction/getCustomerType' | 
+00:08:52.298 | Info | '/transaction/getCustomerType' | 
+00:21:29.636 | Info | '/transaction/getCustomersDetails' | 
+00:21:34.054 | Info | '/transaction/getCustomersDetails' | 
+00:22:01.626 | Info | '/transaction/getCustomersDetails' | 
+00:22:07.219 | Info | '/transaction/getCustomersDetails' | 
+00:22:14.269 | Info | '/transaction/getCustomersDetails' | 
+00:23:08.185 | Info | '/transaction/getCustomersDetails' | 
+00:23:55.958 | Info | '/api/user/login' | 
+00:24:00.797 | Info | '/transaction/getCustomerType' | 
+00:24:07.340 | Info | '/transaction/getCustomersDetails' | 
+00:25:00.336 | Info | '/transaction/getCustomersDetails' | 
+00:25:02.395 | Info | '/transaction/getCustomersDetails' | 
+00:25:35.241 | Info | '/transaction/getCustomerType' | 
+00:25:39.416 | Info | '/transaction/getCustomersDetails' | 
+00:26:19.685 | Info | '/transaction/getCustomersDetails' | 
+00:26:22.055 | Info | '/transaction/getCustomersDetails' | 
+00:26:35.384 | Info | '/transaction/getCustomerType' | 
+00:26:47.251 | Info | '/transaction/getCustomersDetails' | 
+00:27:38.681 | Info | '/transaction/getCustomersDetails' | 
+00:27:46.071 | Info | '/transaction/getCustomerType' | 
+00:27:51.565 | Info | '/transaction/getCustomersDetails' | 
+00:28:38.058 | Info | '/transaction/getCustomersDetails' | 
+00:28:43.145 | Info | '/transaction/getCustomerType' | 
+00:29:27.738 | Info | '/transaction/getCustomersDetails' | 
+00:29:29.052 | Info | '/transaction/getCustomersDetails' | 
+00:29:35.876 | Info | '/transaction/getCustomersDetails' | 
+00:30:03.005 | Info | '/transaction/getCustomersDetails' | 
+00:31:11.129 | Info | '/transaction/getCustomersDetails' | 
+00:32:01.832 | Info | '/transaction/getCustomersDetails' | 
+00:32:02.948 | Info | '/transaction/getCustomersDetails' | 
+00:33:41.514 | Info | '/transaction/getCustomersDetails' | 
+00:34:54.830 | Info | '/transaction/getCustomersDetails' | 
+00:35:22.714 | Info | '/api/user/login' | 
+00:35:29.201 | Info | '/transaction/getCustomerType' | 
+00:35:36.130 | Info | '/transaction/getCustomersDetails' | 
+00:36:17.130 | Info | '/transaction/getCustomersDetails' | 
+00:36:57.339 | Info | '/transaction/getCustomersDetails' | 
+00:37:04.773 | Info | '/transaction/getCustomersDetails' | 
+00:37:14.981 | Info | '/transaction/getCustomersDetails' | 
+00:37:18.385 | Info | '/transaction/getCustomersDetails' | 
+00:37:34.127 | Info | '/transaction/getCustomerType' | 
+00:37:36.555 | Info | '/transaction/getCustomersDetails' | 
+00:37:45.280 | Info | '/transaction/getCustomerType' | 
+00:37:51.489 | Info | '/transaction/getCustomersDetails' | 
+00:38:34.051 | Info | '/transaction/getCustomersDetails' | 
+00:38:38.905 | Info | '/transaction/getCustomersDetails' | 
+00:40:01.858 | Info | '/transaction/getCustomersDetails' | 
+00:40:03.112 | Info | '/transaction/getCustomersDetails' | 
+00:40:04.692 | Info | '/transaction/getCustomersDetails' | 
+00:40:06.670 | Info | '/transaction/getCustomersDetails' | 
+00:40:15.367 | Info | '/transaction/getCustomersDetails' | 
+00:40:26.900 | Info | '/transaction/getCustomersDetails' | 
+00:40:31.485 | Info | '/transaction/getCustomersDetails' | 
+00:40:39.503 | Info | '/transaction/getCustomersDetails' | 
+00:41:08.517 | Info | '/transaction/getCustomerType' | 
+00:41:18.151 | Info | '/transaction/getCustomersDetails' | 
+00:41:34.870 | Info | '/transaction/getCustomersDetails' | 
+00:41:41.226 | Info | '/transaction/getCustomerType' | 
+00:42:40.362 | Info | '/transaction/getDeviceType' | 
+00:43:22.625 | Info | '/transaction/getCustomerType' | 
+00:43:26.497 | Info | '/transaction/getCustomersDetails' | 
+00:43:34.299 | Info | '/transaction/getCustomersDetails' | 
+00:45:42.847 | Info | '/api/user/login' | 
+00:45:50.961 | Info | '/transaction/getCustomerType' | 
+00:45:57.492 | Info | '/transaction/getCustomersDetails' | 
+00:46:04.869 | Info | '/transaction/getCustomersDetails' | 
+00:46:35.220 | Info | '/transaction/getCustomersDetails' | 
+00:47:22.017 | Info | '/transaction/getCustomerType' | 
+00:47:25.974 | Info | '/transaction/getCustomersDetails' | 
+00:48:36.984 | Info | '/transaction/getCustomersDetails' | 
+00:48:38.913 | Info | '/transaction/getCustomersDetails' | 
+00:48:44.319 | Info | '/transaction/getCustomerType' | 
+00:48:48.111 | Info | '/transaction/getCustomersDetails' | 
+00:49:35.486 | Info | '/transaction/getCustomersDetails' | 
+00:49:37.809 | Info | '/transaction/getCustomersDetails' | 
+00:49:39.711 | Info | '/transaction/getCustomersDetails' | 
+00:49:44.418 | Info | '/transaction/getCustomerType' | 
+00:49:48.717 | Info | '/transaction/getCustomersDetails' | 
+00:54:23.658 | Info | '/transaction/getCustomerType' | 
+00:54:28.304 | Info | '/transaction/getCustomersDetails' | 
+00:54:53.219 | Info | '/transaction/getCustomerType' | 
+00:56:41.064 | Info | '/transaction/getCustomerType' | 
+00:56:44.845 | Info | '/transaction/getCustomersDetails' | 
+00:57:07.557 | Info | '/transaction/getCustomerType' | 
+00:57:14.911 | Info | '/transaction/getCustomersDetails' | 
+00:57:21.798 | Info | '/transaction/getCustomerType' | 
+00:57:24.899 | Info | '/transaction/getCustomerType' | 
+00:57:49.513 | Info | '/transaction/getCustomerType' | 
+00:58:00.113 | Info | '/transaction/getCustomersDetails' | 
+00:58:02.276 | Info | '/transaction/getCustomerType' | 
+00:58:05.947 | Info | '/transaction/getCustomersDetails' | 
+00:58:10.624 | Info | '/transaction/getCustomersDetails' | 
+00:58:41.066 | Info | '/transaction/getCustomersDetails' | 
+00:58:54.241 | Info | '/transaction/getCustomersDetails' | 
+00:59:01.713 | Info | '/transaction/getCustomerType' | 
+00:59:03.691 | Info | '/transaction/getCustomersDetails' | 
+00:59:12.104 | Info | '/transaction/getNetworkType' | 
+00:59:15.152 | Info | '/transaction/getNetworkType' | 
+00:59:30.581 | Info | '/transaction/getCustomersDetails' | 
+00:59:40.116 | Info | '/transaction/getCustomersDetails' | 
+01:02:37.096 | Info | '/api/user/login' | 
+01:03:18.410 | Info | '/transaction/getCustomerType' | 
+01:03:20.716 | Info | '/transaction/getCustomersDetails' | 
+01:03:30.666 | Info | '/transaction/getCustomerType' | 
+01:03:32.962 | Info | '/transaction/getCustomersDetails' | 
+01:04:01.873 | Info | '/transaction/getCustomersDetails' | 
+01:04:11.563 | Info | '/transaction/getCustomerType' | 
+01:04:13.827 | Info | '/transaction/getCustomersDetails' | 
+01:20:41.842 | Info | '/transaction/getCustomerType' | 
+01:20:49.584 | Info | '/transaction/getCustomerType' | 
+01:20:50.987 | Info | '/transaction/getCustomerType' | 
+01:20:57.209 | Info | '/transaction/getCustomerType' | 
+01:21:42.918 | Info | '/api/user/login' | 
+01:21:45.230 | Info | '/transaction/getCustomerType' | 
+01:21:47.696 | Info | '/transaction/getCustomersDetails' | 
+01:21:52.415 | Info | '/transaction/getCustomersDetails' | 
+01:22:02.652 | Info | '/transaction/getCustomersDetails' | 
+01:22:05.808 | Info | '/transaction/getCustomerType' | 
+01:22:09.033 | Info | '/transaction/getCustomerType' | 
+01:22:10.966 | Info | '/transaction/getCustomersDetails' | 
+01:22:13.090 | Info | '/transaction/getDeviceType' | 
+01:22:16.472 | Info | '/transaction/getDeviceType' | 
+01:22:27.368 | Info | '/transaction/getCustomerType' | 
+01:22:29.203 | Info | '/transaction/getCustomersDetails' | 
+01:23:26.979 | Info | '/transaction/getCustomerType' | 
+01:23:32.242 | Info | '/transaction/getCustomersDetails' | 
+01:25:00.538 | Info | '/transaction/getRolesType' | 
+01:30:45.617 | Info | '/transaction/getCustomerType' | 
+01:30:49.801 | Info | '/transaction/getCustomerType' | 
+01:31:00.489 | Info | '/transaction/getCustomerType' | 
+01:31:06.303 | Info | '/transaction/getCustomerType' | 
+01:31:36.820 | Info | '/transaction/getCustomerType' | 
+01:31:52.271 | Info | '/transaction/getCustomerType' | 
+01:31:53.939 | Info | '/transaction/getCustomersDetails' | 
+01:31:56.376 | Info | '/transaction/getCustomerType' | 
+01:31:58.417 | Info | '/transaction/getCustomerType' | 
+01:32:01.643 | Info | '/transaction/getCustomersDetails' | 
+01:32:07.214 | Info | '/transaction/getCustomerType' | 
+01:32:09.896 | Info | '/transaction/getDeviceType' | 
+01:32:10.518 | Info | '/transaction/getCustomerType' | 
+01:32:13.763 | Info | '/transaction/getCustomersDetails' | 
+01:32:29.744 | Info | '/transaction/getCustomerType' | 
+01:32:38.074 | Info | '/transaction/getCustomerType' | 
+01:32:39.919 | Info | '/transaction/getNetworkType' | 
+01:32:47.737 | Info | '/transaction/getCustomerType' | 
+01:32:51.713 | Info | '/transaction/getCustomersDetails' | 
+01:34:09.046 | Info | '/transaction/getCustomersDetails' | 
+01:34:16.016 | Info | '/transaction/getCustomersDetails' | 
+01:35:19.759 | Info | '/transaction/getCustomersDetails' | 
+01:35:26.522 | Info | '/transaction/getCustomerType' | 
+01:35:28.917 | Info | '/transaction/getCustomersDetails' | 
+01:37:10.991 | Info | '/transaction/getCustomersDetails' | 
+01:37:52.132 | Info | '/transaction/getCustomersDetails' | 
+01:48:22.007 | Info | '/transaction/getCustomerType' | 
+01:48:34.829 | Info | '/transaction/getCustomerType' | 
+01:48:54.554 | Info | '/transaction/getCustomerType' | 
+01:49:08.972 | Info | '/transaction/getCustomerType' | 
+01:50:09.767 | Info | '/transaction/getCustomerType' | 
+01:50:12.186 | Info | '/transaction/getCustomersDetails' | 
+01:51:21.974 | Info | '/transaction/getCustomerType' | 
+01:51:39.353 | Info | '/transaction/getCustomerType' | 
+01:51:50.991 | Info | '/transaction/getCustomerType' | 
+01:51:53.406 | Info | '/transaction/getCustomersDetails' | 
+01:51:57.715 | Info | '/transaction/getCustomerType' | 
+01:52:04.212 | Info | '/transaction/getCustomerType' | 
+01:52:06.201 | Info | '/transaction/getCustomersDetails' | 
+01:58:22.145 | Info | '/transaction/getCustomerType' | 
+01:58:24.528 | Info | '/transaction/getCustomersDetails' | 
+02:10:34.655 | Info | '/transaction/createCustomerType' | 
+02:10:34.818 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:10:48.284 | Info | '/transaction/createCustomerType' | 
+02:10:48.294 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:10:49.637 | Info | '/transaction/createCustomerType' | 
+02:10:49.645 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:12:49.392 | Info | '/transaction/createCustomerType' | 
+02:12:49.397 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:14:41.401 | Info | '/transaction/createCustomerType' | 
+02:14:41.532 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:15:32.486 | Info | '/transaction/createCustomerType' | 
+02:15:32.492 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:16:51.264 | Info | '/transaction/createCustomerType' | 
+02:16:51.270 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:16:53.811 | Info | '/transaction/createCustomerType' | 
+02:16:53.819 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:17:44.042 | Info | '/transaction/createCustomerType' | 
+02:17:44.047 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+02:20:00.446 | Info | '/transaction/createDeviceType' | 
+02:20:00.452 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:20:38.961 | Info | '/api/user/login' | 
+02:21:13.952 | Info | '/transaction/createDeviceType' | 
+02:21:13.957 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:21:16.912 | Info | '/transaction/createDeviceType' | 
+02:21:16.921 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:21:33.656 | Info | '/transaction/createDeviceType' | 
+02:21:38.765 | Info | '/transaction/createDeviceType' | 
+02:21:38.770 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:22:52.475 | Info | '/transaction/createDeviceType' | 
+02:22:52.479 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:23:26.594 | Info | '/transaction/createDeviceType' | 
+02:23:26.728 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:25:28.798 | Info | '/transaction/getCustomerType' | 
+02:25:40.325 | Info | '/transaction/createCustomerType' | 
+02:25:40.334 | Info | ({'message':'Column \'cnic\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'cnic\' cannot be null'}) | 
+02:25:40.347 | Info | '/transaction/getCustomerType' | 
+02:26:45.009 | Info | '/transaction/getCustomerType' | 
+02:27:11.543 | Info | '/api/user/login' | 
+02:27:37.063 | Info | '/transaction/getNetworkType' | 
+02:27:40.471 | Info | '/transaction/getDeviceType' | 
+02:28:03.869 | Info | '/transaction/createDeviceType' | 
+02:28:03.903 | Info | '/transaction/getDeviceType' | 
+02:28:07.331 | Info | '/transaction/getCustomerType' | 
+02:29:07.805 | Info | '/transaction/createDeviceType' | 
+02:29:07.809 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:29:48.111 | Info | '/transaction/createDeviceType' | 
+02:29:48.116 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:29:49.665 | Info | '/transaction/createDeviceType' | 
+02:29:49.669 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:30:22.306 | Info | '/transaction/createDeviceType' | 
+02:30:22.310 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:31:03.164 | Info | '/transaction/createDeviceType' | 
+02:31:03.167 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:31:10.174 | Info | '/transaction/createDeviceType' | 
+02:31:10.179 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:31:28.186 | Info | '/transaction/getDeviceType' | 
+02:32:26.424 | Info | '/transaction/createDeviceType' | 
+02:32:26.428 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:32:41.272 | Info | '/transaction/createDeviceType' | 
+02:32:41.406 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:32:42.399 | Info | '/transaction/createDeviceType' | 
+02:32:42.404 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:34:15.450 | Info | '/transaction/getDeviceType' | 
+02:34:17.847 | Info | '/transaction/getNetworkType' | 
+02:34:20.100 | Info | '/transaction/getDeviceType' | 
+02:34:38.343 | Info | '/transaction/createDeviceType' | 
+02:34:38.348 | Info | '/transaction/getDeviceType' | 
+02:37:05.381 | Info | '/transaction/createDeviceType' | 
+02:37:05.386 | Info | ({'message':'Column \'network\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'network\' cannot be null'}) | 
+02:38:27.147 | Info | '/transaction/createDeviceType' | 
+02:46:34.258 | Info | '/transaction/createCustomerType' | 
+02:47:14.792 | Info | '/transaction/getCustomerType' | 
+10:38:10.920 | Info | '/api/user/login' | 
+10:38:32.642 | Info | '/transaction/getCustomerType' | 
+11:00:08.747 | Info | '/transaction/getCustomerType' | 
+11:00:16.037 | Info | '/transaction/getCustomersDetails' | 
+11:01:58.337 | Info | '/transaction/getCustomersDetails' | 
+11:02:07.565 | Info | '/transaction/getCustomerType' | 
+11:02:09.669 | Info | '/transaction/getCustomersDetails' | 
+11:04:57.216 | Info | '/transaction/getCustomersDetails' | 
+11:05:10.134 | Info | '/transaction/getCustomersDetails' | 
+11:05:31.071 | Info | '/transaction/getCustomersDetails' | 
+11:05:39.040 | Info | '/transaction/getCustomersDetails' | 
+11:05:52.414 | Info | '/transaction/getCustomerType' | 
+11:05:54.562 | Info | '/transaction/getCustomersDetails' | 
+11:06:24.054 | Info | '/transaction/getCustomersDetails' | 
+11:06:28.047 | Info | '/transaction/getCustomersDetails' | 
+11:06:31.032 | Info | '/transaction/getCustomersDetails' | 
+11:07:02.942 | Info | '/transaction/getCustomerType' | 
+11:07:05.254 | Info | '/transaction/getCustomersDetails' | 
+11:07:29.047 | Info | '/transaction/getCustomersDetails' | 
+11:07:33.068 | Info | '/transaction/getCustomersDetails' | 

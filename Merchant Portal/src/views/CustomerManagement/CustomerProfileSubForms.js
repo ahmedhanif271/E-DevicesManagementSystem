@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import { GridButton1 , GridButton2 } from '../../CustomComponents/GridButton';
 import {
   MDBNavbar,
@@ -22,6 +23,11 @@ import {
 
 } from 'mdb-react-ui-kit';
 import DataTable from 'react-data-table-component';
+import { getToken } from '../../reducers/AuthSlice'
+import { getCustomersDetails, GetCustomerDetailsAsync, createNewProfileAsync, getCustomerList } from '../../reducers/CustomerProfileSlice'
+import { Link } from 'react-router-dom';
+const statusMap = { "1": "Active", "2": "Suspended", "3": "Dropped" }
+
 const customerColumns = [
   {
     name: 'Name',
@@ -49,7 +55,7 @@ const customerColumns = [
   },
 ];
 
-const customerData1 = [
+const customerData = [
   {
     id: 1,
     name: 'Abdul Rafay',
@@ -60,7 +66,7 @@ const customerData1 = [
     action: <GridButton1 iconName="user-times" color="green" />
   },
   {
-    id: 2,
+    id: 1,
     name: 'Abdul Rafay',
     units: '1121',
     month: 'Febuary',
@@ -69,7 +75,7 @@ const customerData1 = [
     action: <GridButton1 iconName="user-times" color="green" />
   },
   {
-    id: 3,
+    id: 1,
     name: 'Abdul Rafay',
     units: '1880',
     month: 'March',
@@ -78,39 +84,53 @@ const customerData1 = [
     action: <GridButton1 iconName="user-times" color="red" />
   },
 ]
+const customerInfoColumns = [
+  {
+    name: 'Name',
+    selector: row => row.username,
+  },
+  {
+    name: 'Password',
+    selector: row => row.password,
+  }, 
+  {
+    name: 'CNIC',
+    selector: row=> row.cnic,
+  }, 
+  {
+    name: 'Phone',
+    selector: row=> row.phone,
+  }, 
+  {
+    name: 'Date of birth',
+    selector: row=> row.dob,
+  }, 
+  {
+    name: 'Gender',
+    selector: row=> row.gender,
+  }, 
+  {
+    name: 'Address',
+    selector: row=> row.address,
+  },  
+  {
+    name: 'User Id',
+    selector: row=> row.userId,
+  },  
 
-const customerData2 = [
-  {
-    id: 1,
-    name: 'Ahmed Hanif',
-    units: '12220',
-    month: 'January',
-    amount: '50400',
-    status: 'Paid',
-    action: <GridButton2 iconName="user-times" color="green" />
-  },
-  {
-    id: 2,
-    name: 'Ahmed Hanif',
-    units: '1521',
-    month: 'Febuary',
-    amount: '8360',
-    status: 'Paid',
-    action: <GridButton2 iconName="user-times" color="green" />
-  },
-  {
-    id: 3,
-    name: 'Ahmed Hanif',
-    units: '180',
-    month: 'March',
-    amount: '1250',
-    status: 'Paid',
-    action: <GridButton2 iconName="user-times" color="green" />
-  },
 ]
 
-export function CustomerSubProfile() {
 
+export const CustomerSubProfile = (props) => {
+  
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+  //navigate('/dashboard')
+  
+    const data = useSelector(getCustomerList);
+    
+  
+  
   return (
     <div className="p-4 text-start w-100">
 
@@ -120,118 +140,39 @@ export function CustomerSubProfile() {
 
           <MDBRow>
             <h5>Customer Information</h5>
-            <MDBCol lg="4" className="py-1">
-              <MDBInput label="Name" icon="envelope" group type="text" validate error="wrong"
-                success="right" />
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <MDBInput label="CNIC" icon="envelope" group type="text" validate error="wrong"
-                success="right" />
-            </MDBCol>
+            <DataTable
+        pagination="true"
+        columns={customerInfoColumns}
+        data={data}
 
-            <MDBCol lg="4" className="py-1">
-              <MDBInput label="Phone" icon="envelope" group type="text" validate error="wrong"
-                success="right" />
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <MDBInput label="Email" icon="envelope" group type="text" validate error="wrong"
-                success="right" />
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <MDBInput label="Whatsapp" icon="envelope" group type="text" validate error="wrong"
-                success="right" />
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-
-              <MDBInput label="Date of Birth" icon="envelope" type="date" defaultValue={new Date().toString()} value={new Date().toString()} error="wrong"
-                success="right" />
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <select className="form-select">
-                <option>Select Gender</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <option value="3">Others</option>
-              </select>
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <MDBInput label="Care of" icon="envelope" group type="text" validate error="wrong"
-                success="right" />
-            </MDBCol>
-
+      />
+            
+ <hr />
+          
           </MDBRow>
           <hr />
-          <MDBRow className="mt-3">
-            <h5>Basic Information</h5>
+          
 
-            <MDBCol lg="4" className="py-1">
-              <select className="form-select">
-                <option>Select City</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <select className="form-select">
-                <option>Select Region</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <select className="form-select">
-                <option>Select Disctrict</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <select className="form-select">
-                <option>Select Tehsil</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <MDBInput label="Town/Village" icon="envelope" group type="text" validate error="wrong"
-                success="right" />
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <MDBInput label="Zone/Circle" icon="envelope" group type="text" validate error="wrong"
-                success="right" />
-            </MDBCol>
-            <MDBCol lg="4" className="py-1">
-              <MDBInput label="UC" icon="envelope" group type="text" validate error="wrong"
-                success="right" />
-            </MDBCol>
-
-          </MDBRow>
-
-          <hr />
-          <MDBRow>
-            <h5>Documents</h5>
-            <MDBCol lg="4" className="py-1">
-              Customer picture: <input type="file" />
-            </MDBCol>
-
-            <MDBCol lg="4" className="py-1">
-              Customer CNIC: <input type="file" />
-            </MDBCol>
-
-          </MDBRow>
+         
         </div>
 
       </form>
-
+      <MDBCol size="12">
+        <div className="text-end w-100">
+        <Link to="/home/customers/list"><MDBBtn color="danger" className="mx-2 my-5" type={'button'}>Close</MDBBtn></Link>
+        </div>
+      </MDBCol>
 
     </div>
   );
 }
-export function CustomerSubStatus1() {
+export function CustomerSubStatus() {
+
+  const [basicModal, setBasicModal] = useState(false);
+  const toggleShow = () => {
+
+    setBasicModal(!basicModal)
+  };
 
   return (
     <div className="p-4 text-start w-100">
@@ -267,43 +208,7 @@ export function CustomerSubStatus1() {
 }
 
 
-
-export function CustomerSubStatus2() {
-
-  return (
-    <div className="p-4 text-start w-100">
-
-      <form>
-        <MDBRow>
-          <MDBCol size='4'>
-            <MDBInput className="mt-3" label="Devices Connected" type="text" value={"11"} disabled style={{ backgroundColor: "#FFFFFF" }}
-            />
-          </MDBCol>
-          <MDBCol size='4'>
-            <MDBInput className="mt-3" label="Units Consumed" type="text" value={"1599"} disabled style={{ backgroundColor: "#FFFFFF" }}
-            />
-          </MDBCol>
-          <MDBCol size='4'>
-            <MDBInput className="mt-3" label="Amount Due" type="text" value={"0"} disabled style={{ backgroundColor: "#FFFFFF" }}
-            />
-          </MDBCol>
-          <MDBCol size='4'>
-            <MDBInput className="mt-3" label="Amount paid (Current Month)" type="text" value={"1250"} disabled style={{ backgroundColor: "#FFFFFF" }}
-            />
-          </MDBCol>
-          <MDBCol size='4'>
-            <MDBInput className="mt-3" label="Total Months" type="text" value={"3"} disabled style={{ backgroundColor: "#FFFFFF" }}
-            />
-          </MDBCol>
-        </MDBRow>
-      </form>
-
-
-    </div>
-  );
-}
-
-export function CustomerBill1() {
+export function CustomerBill() {
 
   return (
     <div className="p-4 text-start w-100">
@@ -313,7 +218,7 @@ export function CustomerBill1() {
       <DataTable
         pagination="true"
         columns={customerColumns}
-        data={customerData1}
+        data={customerData}
 
       />
 
@@ -321,20 +226,3 @@ export function CustomerBill1() {
   );
 }
 
-export function CustomerBill2() {
-
-  return (
-    <div className="p-4 text-start w-100">
-      <div className="w-100 d-flex p-4 justify-content-end" >
-        <MDBBtn href='/home/customers/add' >Add</MDBBtn>
-      </div>
-      <DataTable
-        pagination="true"
-        columns={customerColumns}
-        data={customerData2}
-
-      />
-
-    </div>
-  );
-}

@@ -1,4 +1,4 @@
-const  Model  = require("../Modules/NetworkType");
+const  Model  = require("../BusinessLogic/Modules/NetworkType");
 
 class GetNetworkType
 {
@@ -6,15 +6,16 @@ class GetNetworkType
     {
            // message.NAME=req.body.name;  
             //message.NAME=req.query.name; 
-            message.TYPENAME = req.body.typeName;
-            message.TYPEIP = req.body.typeIp;
-            message.TYPEPORT = req.body.typePort;
+            message.NAME = req.body.name;
+            message.IP_ADDRESS = req.body.ip;
+            message.PORT = req.body.port;
 
            
     }
     async process(message)
     {
         message.LIST = await Model.getNetworkType(message)
+        message.STATUS="Success";
 
 
     }
@@ -22,6 +23,7 @@ class GetNetworkType
     {
         res.responseBody.message = "Network Type added "
         res.responseBody.list = message.LIST
+        res.status=message.STATUS;
 
     
     }

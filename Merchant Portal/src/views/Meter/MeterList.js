@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import {
@@ -18,85 +18,59 @@ import {
   MDBCardText,
   MDBBtn,
   MDBInput,
-  MDBCardHeader
+  MDBCardHeader,
+  MDBBadge,
+  MDBBreadcrumb,
+  MDBBreadcrumbItem
 } from 'mdb-react-ui-kit';
 
 import DataTable from 'react-data-table-component';
+import { getToken, loginAsync } from '../../reducers/AuthSlice'
+import { MeterDetails } from './MeterSetup';
+import { GetMeterList} from '../../api/MeterApis';
+import { GetMeterListAsync, getMeterList} from '../../reducers/MeterSlice'
+import { Link } from 'react-router-dom';
 
-import { MeterSetup } from './MeterSetup';
+
 const columns = [
   {
-    name: 'Meter',
-    selector: row => row.meter,
+    name: 'Network',
+    selector: row => row.network,
   },
   {
-    name: 'Data type',
-    selector: row => row.dataType,
+    name: 'Entity',
+    selector: row => row.entity,
   },
   {
-    name: 'Status',
-    selector: row => row.status,
-  },
-  {
-    name: 'Actions',
-    selector: row => row.action,
-  },
-];
-
-const data = [
-  {
-    id: 1,
-    meter: 'Lovato',
-    dataType:'float',
-    status:'Active',
-    action: <MDBBtn href='/home/meter-config/add' >Add New</MDBBtn>
-  },
-  {
-    id: 2,
-    meter: 'Schneider',
-    dataType:'double float',
-    status:'InActive'
-  },
-  {
-    id: 3,
-    meter: 'PEL',
-    dataType:'float',
-    status:'Active'
-  },
-  {
-    id: 4,
-    meter: 'IMO',
-    dataType:'float',
-    status:'Active'
-  },
-  {
-    id: 5,
-    meter: 'Lovato',
-    dataType:'double ',
-    status:'InActive'
-  },
-  {
-    id: 6,
-    meter: 'Lovato',
-    dataType:'long',
-    status:'Active'
-  },
-  {
-    id: 7,
-    meter: 'Iskra',
-    dataType:'double',
-    status:'InActive'
-  },
+    name: 'Serial',
+    selector: row => row.serial,
+  }
+  
 ]
 export function MeterList() {
+const dispatch = useDispatch();
+  const token = useSelector(getToken);
 
+  useEffect(() => {
+    dispatch(GetMeterListAsync({token }));
+  }, []);
+  const data = useSelector(getMeterList);
+  console.log(data)
   return (
     <div className="p-4 text-start ">
-  
+      <MDBBreadcrumb>
+        <MDBBreadcrumbItem>
+          <a>Home</a>
+        </MDBBreadcrumbItem>
+        <MDBBreadcrumbItem active>
+          <a >Meter List</a>
+        </MDBBreadcrumbItem>
+
+      </MDBBreadcrumb>
       <MDBCard alignment='center' >
-      <MDBCardHeader className="text-start"><h5> Meters List</h5></MDBCardHeader>
+        <MDBCardHeader className="text-start"><h5> Meter Management</h5></MDBCardHeader>
         <div className="w-100 d-flex p-4 justify-content-end" >
-          <MDBBtn href='/home/meter-config/add' >Add New</MDBBtn>
+        <Link to={"/home/meter-config/add"}><MDBBtn>Add New</MDBBtn></Link>
         </div>
         <MDBRow>
           <MDBCardBody>
@@ -104,7 +78,7 @@ export function MeterList() {
               pagination="true"
               columns={columns}
               data={data}
-           
+
             />
           </MDBCardBody>
         </MDBRow>
