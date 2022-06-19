@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
+
 import {
+  MDBInput,
   MDBNavbar,
   MDBNavbarNav,
   MDBNavbarItem,
@@ -44,6 +46,7 @@ export const CustomerProfile = (props) => {
   var formData = useSelector(getCustomersDetails);
 
 
+
   const [fillActive, setFillActive] = useState('tab1');
  
   const handleFillClick = (value) => {
@@ -82,7 +85,7 @@ export const CustomerProfile = (props) => {
                 />
 
 <h4 className='mt-3'>{formData?.details?.username}</h4>
-<p className=''>Ahmed Hanif | <MDBBadge color='success'>Bill Paid</MDBBadge> </p>
+<p className=''>{formData.username} | <MDBBadge color='success'>Bill Paid</MDBBadge> </p>
                 <hr />
               </MDBCol>
               <MDBCol size="12">
@@ -108,7 +111,50 @@ export const CustomerProfile = (props) => {
 
                 <MDBTabsContent>
                   <MDBTabsPane show={fillActive === 'tab1'}><CustomerSubStatus/></MDBTabsPane>
-                  <MDBTabsPane show={fillActive === 'tab2'}>< CustomerSubProfile /></MDBTabsPane>
+                  <MDBTabsPane show={fillActive === 'tab2'}>
+                  <div className="p-4 text-start w-100">
+
+<form>
+  <MDBRow>
+    <MDBCol size='4'>
+      <MDBInput className="mt-3" label="Username" type="text" value={formData.username} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+    </MDBCol>
+    <MDBCol size='4'>
+      <MDBInput className="mt-3" label="Password" type="text" value={formData.password} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+    </MDBCol>
+    <MDBCol size='4'>
+      <MDBInput className="mt-3" label="CNIC" type="text" value={formData.cnic} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+    </MDBCol>
+    <MDBCol size='4'>
+      <MDBInput className="mt-3" label="Phone" type="text" value={formData.phone} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+    </MDBCol>
+    <MDBCol size='4'>
+      <MDBInput className="mt-3" label="Address" type="text" value={formData.address} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+    </MDBCol>
+    <MDBCol size='4'>
+      <MDBInput className="mt-3" label="Date of Birth" type="text" value={formData.dob} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+    </MDBCol>
+    <MDBCol size='4'>
+      <MDBInput className="mt-3" label="Gender" type="text" value={formData.gender} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+    </MDBCol>
+    <MDBCol size='4'>
+      <MDBInput className="mt-3" label="User Id" type="text" value={formData.userId.toString()} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+    </MDBCol>
+    
+  </MDBRow>
+</form>
+
+
+</div>
+                  </MDBTabsPane>
                   <MDBTabsPane show={fillActive === 'tab3'}>< CustomerBill details={{}} /></MDBTabsPane>
                   
                 </MDBTabsContent>

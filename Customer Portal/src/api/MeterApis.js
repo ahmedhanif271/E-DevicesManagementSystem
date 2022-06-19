@@ -7,7 +7,9 @@ export function CreateNewMeter(data,token) {
 export function GetMeterList(data,token) {
   return apiUtil.getApi("transaction/getDeviceType",token, data)
 }
-
+export function GetMeterInfo (data,token) {
+  return apiUtil.getApi("transaction/getMeterInfo",token, data)
+}
 
 //export function LinkDonor(data,token) {
 //  return apiUtil.postApi('donor/link/child', token, data)

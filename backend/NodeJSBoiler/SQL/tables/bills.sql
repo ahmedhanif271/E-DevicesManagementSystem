@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2022 at 06:48 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.9
+-- Generation Time: May 12, 2022 at 11:03 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,13 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `bills` (
-  `Id` int(11) NOT NULL,
-  `data` varchar(255) NOT NULL,
-  `counter` int(25) NOT NULL,
-  `amount` int(25) NOT NULL,
-  `status` int(10) NOT NULL,
-  `entity_Id` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `ID` int(15) NOT NULL,
+  `meterID` varchar(15) NOT NULL,
+  `month` date NOT NULL,
+  `bill` int(15) NOT NULL,
+  `entity_id` int(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -44,7 +43,7 @@ CREATE TABLE `bills` (
 -- Indexes for table `bills`
 --
 ALTER TABLE `bills`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -54,7 +53,7 @@ ALTER TABLE `bills`
 -- AUTO_INCREMENT for table `bills`
 --
 ALTER TABLE `bills`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(15) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

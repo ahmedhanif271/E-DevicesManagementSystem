@@ -1,4 +1,5 @@
 const  Model  = require("../BusinessLogic/Modules/CustomerType");
+const SMSModel = require("../BusinessLogic/Modules/SMSNotifications");
 
 class CreateCustomerType
 {
@@ -21,12 +22,15 @@ class CreateCustomerType
     async process(message)
     {
         await Model.createCustomerType(message)
+        await SMSModel.send(message.PHONE, 'Your Customer Registration is Successfull...!!')
+
+
 
 
     }
     async output(res,message)
     {
-        res.responseBody.message = "Customer Type added "
+        res.responseBody.message = "Customer added "
         
 
         res.status="Success";

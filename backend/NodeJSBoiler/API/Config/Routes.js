@@ -146,4 +146,41 @@ module.exports = {
         controller: "GetDonorDetails",
         allowedMethod: ['GET']
     },
+
+    "/transaction/getMeterDetails": {
+        controller: "GetMeterDetails",
+        allowedMethod: ['GET']
+    },
+    "/transaction/getConnectedDevices": {
+        controller: "GetConnectedDevices",
+        allowedMethod: ['GET']
+    },
+    "/transaction/getUnitRestriction": {
+        controller: "GetUnitRestriction",
+        allowedMethod: ['GET']
+    },
+    "/transaction/getMeterInfo": {
+        controller: "GetMeterInfo",
+        allowedMethod: ['GET']
+    },
+    "/transaction/getNetworkInfo": {
+        controller: "GetNetworkInfo",
+        allowedMethod: ['GET']
+    },
+
+    "/transaction/getMyDetails": {
+        controller: "GetMyDetails",
+        allowedMethod: ['GET']
+    },
+
+    "/transaction/getAnalytics": {
+        controller: "GetAnalytics",
+        allowedMethod: ['GET']
+    },
+
+    "/transaction/createUnitsAlert": {
+        controller: "CreateUnitsAlert",
+        allowedMethod: ['POST']
+    },
+
 }

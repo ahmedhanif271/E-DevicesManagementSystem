@@ -6,8 +6,8 @@ class NetworkType
     async createNetworkType(message)
     {
     
-        var results=await client.Query("Insert into networktype (name,ip_address,port) values(?,?,?)",
-        [message.NAME, message.IP_ADDRESS, message.PORT]);
+        var results=await client.Query("Insert into networktype (name,ip_address,port,userId) values(?,?,?,?)",
+        [message.NAME, message.IP_ADDRESS, message.PORT, message.USERID]);
         
     }
     async getNetworkType(message)

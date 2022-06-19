@@ -74,7 +74,7 @@ export const CustomerSetup = (props) => {
                   <MDBRow>
                     <h5>Customer Information</h5>
                     <MDBCol lg="4" className="py-1">
-                    <MDBInput label="Name" icon="envelope" type="text" error="wrong"
+                    <MDBInput label="Name" icon="envelope" type="text"  error="wrong"
                         success="right" name="username" value={formData.username} onChange={handleChange} />
                     </MDBCol>
                     <MDBCol lg="4" className="py-1">
@@ -98,8 +98,8 @@ export const CustomerSetup = (props) => {
       
             <MDBCol lg="4" className="py-1">
 
-            <MDBInput label="Date of Birth" icon="envelope" type="date" error="wrong"
-                        success="right" name="dob" onChange={handleChange} />
+            <MDBInput type="date" error="wrong"
+                        success="right" name="dob" value={formData.dob} onChange={handleChange} />
 
             </MDBCol>
             <MDBCol lg="4" className="py-1">

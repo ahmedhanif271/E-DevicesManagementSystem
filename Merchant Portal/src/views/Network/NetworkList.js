@@ -44,6 +44,10 @@ const columns = [
   {
     name: 'Port Number',
     selector: row => row.port,
+  },
+  {
+    name: 'User ID',
+    selector: row => row.userId,
   }
   
 ]

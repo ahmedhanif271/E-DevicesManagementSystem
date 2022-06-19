@@ -1,4 +1,6 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Login } from './views/Authentication/Login';
 
@@ -19,6 +21,7 @@ function App() {
          
         </Routes>
       </Router>
+      <ToastContainer/>
     </div>
   );
 }

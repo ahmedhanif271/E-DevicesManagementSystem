@@ -7,8 +7,9 @@ class GetNetworkType
            // message.NAME=req.body.name;  
             //message.NAME=req.query.name; 
             message.NAME = req.body.name;
-            message.IP_ADDRESS = req.body.ip;
+            message.IP_ADDRESS = req.body.ip_address;
             message.PORT = req.body.port;
+            message.USERID = req.body.userId;
 
            
     }

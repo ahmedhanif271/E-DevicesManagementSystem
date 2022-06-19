@@ -85,55 +85,12 @@ export const NetworkSetup = (props) => {
                     <MDBInput label="Port" icon="envelope" type="text" error="wrong"
                         success="right" name="port" value={formData.port} onChange={handleChange} />
                     </MDBCol>
-
-                   {/* <MDBCol lg="4" className="py-1">
-                      <MDBInput label="CNIC" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
+                    <MDBCol lg="4" className="py-1">
+                    <MDBInput label="User ID" icon="envelope" type="text" error="wrong"
+                        success="right" name="userId" value={formData.userId} onChange={handleChange} />
                     </MDBCol>
+
                   
-                    <MDBCol lg="4" className="py-1">
-                      <MDBInput label="Phone" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
-                      <MDBInput label="Meter ID" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
-                      <MDBInput label="Meter Type" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
-                      <MDBInput label="Ip address" icon="envelope" group type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
-
-                      <MDBInput label="Address" icon="envelope" type="text" validate error="wrong"
-                        success="right" />
-                    </MDBCol>
-                    <MDBCol lg="4" className="py-1">
-                      <select className="form-select">
-                        <option>Select Gender</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
-                        <option value="3">Others</option>
-                      </select>
-                    </MDBCol>
-                    
-                   
-                  </MDBRow>
-                  <hr />                
-                  <hr />
-                  <MDBRow>
-                    <h5>Documents</h5>
-                    <MDBCol lg="4" className="py-1">
-                      Customer picture: <input type="file" />
-                    </MDBCol>
-              
-                    <MDBCol lg="4" className="py-1">
-                     Customer CNIC: <input type="file" />
-  </MDBCol>*/}
                   
   </MDBRow> 
                 </div>

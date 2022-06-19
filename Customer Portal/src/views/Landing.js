@@ -24,10 +24,12 @@ import {
 } from 'mdb-react-ui-kit';
 import { Login } from './Authentication/Login'
 
+import Dashboard  from './Dashboard/Dashboard'
 import { MeterDetail } from './Meter/MeterConfiguration';
-import { DeviceDetail } from './Connected Devices/DeviceConfiguration';
+import { NetworkList } from './Network/NetworkList';
 import { UnitDetail } from './Unit Restriction/UnitConfiguration';
 import { BillsDetail } from './Bills/BillsConfiguration';
+import { MyDetail } from './MyDetail/DetailConfiguration';
 
 import {
   BrowserRouter as Router, Routes, Route, Link, useParams,
@@ -46,9 +48,14 @@ export function Landing() {
 
           <div className="custom-sidebar-menu-item">
             <div className="custom-sidebar-menu-item-inner">
-              Dashboard
+              <Link to={`/home/dashboard`}>Dashboard</Link>
             </div>
           </div>
+          <div className="custom-sidebar-menu-item">
+            <div className="custom-sidebar-menu-item-inner">
+            <Link to={`/home/my-detail`} >My Details</Link>
+            </div>
+</div>
           <div className="custom-sidebar-menu-item">
             <div className="custom-sidebar-menu-item-inner">
             <Link to={`/home/meter-detail`} >Meter Details</Link>
@@ -56,13 +63,13 @@ export function Landing() {
 </div>
             <div className="custom-sidebar-menu-item">
             <div className="custom-sidebar-menu-item-inner">
-              <Link to={`/home/device-detail`} >Connected Devices</Link>
+              <Link to={`/home/network-detail`} >Network list</Link>
             </div>
           </div>
 
           <div className="custom-sidebar-menu-item">
             <div className="custom-sidebar-menu-item-inner">
-              <Link to={`/home/unit-config`} >Units Restriction</Link>
+              <Link to={`/home/unit-config`} >Units Alert</Link>
             </div>
           </div>
 
@@ -79,9 +86,10 @@ export function Landing() {
       </div>
           <Routes>
             
-            
+          <Route path={`dashboard/*`} element={ <Dashboard />} />
+            <Route path={`my-detail/*`} element={ <MyDetail />} />
             <Route path={`meter-detail/*`} element={ <MeterDetail />} />
-            <Route path={`device-detail/*`} element={ <DeviceDetail />} />
+            <Route path={`network-detail/*`} element={ <NetworkList />} />
             <Route path={`unit-config/*`} element={ <UnitDetail />} />
             <Route path={`bills-config/*`} element={ <BillsDetail />} />
           </Routes>

@@ -1,0 +1,26 @@
+22:47:10.094 | Info | '/api/user/login' | 
+22:47:13.051 | Info | '/transaction/getCustomerType' | 
+22:47:18.677 | Info | '/transaction/createCustomerType' | 
+22:47:18.699 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+22:47:18.744 | Info | '/transaction/getCustomerType' | 
+22:49:28.409 | Info | '/transaction/getCustomerType' | 
+22:49:32.496 | Info | '/transaction/createCustomerType' | 
+22:49:32.502 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+22:49:32.531 | Info | '/transaction/getCustomerType' | 
+22:49:38.814 | Info | '/transaction/createCustomerType' | 
+22:49:38.823 | Info | ({'message':'Column \'username\' cannot be null','code':'ER_BAD_NULL_ERROR','errno':1048,'sqlState':'23000','sqlMessage':'Column \'username\' cannot be null'}) | 
+22:49:38.856 | Info | '/transaction/getCustomerType' | 
+22:51:29.671 | Info | '/transaction/getCustomerType' | 
+22:51:44.715 | Info | '/api/user/login' | 
+22:52:05.621 | Info | '/transaction/getCustomersDetails' | 
+22:52:08.898 | Info | '/transaction/getCustomersDetails' | 
+22:52:15.997 | Info | '/transaction/getCustomerType' | 
+22:52:18.046 | Info | '/transaction/getCustomersDetails' | 
+23:36:14.866 | Info | '/transaction/getMeterInfo' | 
+23:36:16.702 | Info | '/transaction/getNetworkInfo' | 
+23:36:18.657 | Info | '/transaction/getDeviceType' | 
+23:36:22.001 | Info | '/transaction/getMeterInfo' | 
+23:41:19.090 | Info | '/transaction/getMeterInfo' | 
+23:42:18.222 | Info | '/transaction/getMeterInfo' | 
+23:42:19.537 | Info | '/transaction/getMeterInfo' | 
+23:53:11.290 | Info | '/transaction/getMyDetails' | 

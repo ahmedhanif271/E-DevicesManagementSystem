@@ -28,33 +28,19 @@ import DataTable from 'react-data-table-component';
 import { getToken, loginAsync } from '../../reducers/AuthSlice'
 
 import { GetMeterList} from '../../api/MeterApis';
-import { GetMeterListAsync, getMeterList} from '../../reducers/MeterSlice'
+import { GetMeterListAsync, getMeterList, getMeterInfo, GetMeterInfoAsync} from '../../reducers/MeterSlice'
 import { Link } from 'react-router-dom';
 
 
-const columns = [
-  {
-    name: 'Network',
-    selector: row => row.network,
-  },
-  {
-    name: 'Entity',
-    selector: row => row.entity,
-  },
-  {
-    name: 'Serial',
-    selector: row => row.serial,
-  }
-  
-]
+
 export function MeterList() {
 const dispatch = useDispatch();
   const token = useSelector(getToken);
-
+  var formData = useSelector(getMeterInfo);
   useEffect(() => {
-    dispatch(GetMeterListAsync({token }));
+    dispatch(GetMeterInfoAsync({token }));
   }, []);
-  const data = useSelector(getMeterList);
+  const data = useSelector(getMeterInfo);
   console.log(data)
   return (
     <div className="p-4 text-start ">
@@ -71,12 +57,22 @@ const dispatch = useDispatch();
         <MDBCardHeader className="text-start"><h5> Meter Details</h5></MDBCardHeader>
         <MDBRow>
           <MDBCardBody>
-            <DataTable
-              pagination="true"
-              columns={columns}
-              data={data}
-
-            />
+          <form>
+  <MDBRow>
+    <MDBCol size='4'>
+      <MDBInput className="mt-3" label="Network" type="text" value={formData.network} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+      </MDBCol>
+      <MDBCol size='4'>
+      <MDBInput className="mt-3" label="entity" type="text" value={formData.entity} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+      </MDBCol>
+      <MDBCol size='4'>
+      <MDBInput className="mt-3" label="serial" type="text" value={formData.serial} disabled style={{ backgroundColor: "#FFFFFF" }}
+      />
+      </MDBCol>
+      </MDBRow>
+      </form>
           </MDBCardBody>
         </MDBRow>
       </MDBCard>

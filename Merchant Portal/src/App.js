@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { Login } from './views/Authentication/Login';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import { Landing } from './views/Landing';
@@ -18,7 +20,9 @@ function App() {
           
          
         </Routes>
+       
       </Router>
+       <ToastContainer/>
     </div>
   );
 }

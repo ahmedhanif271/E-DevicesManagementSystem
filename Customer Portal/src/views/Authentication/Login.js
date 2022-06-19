@@ -80,7 +80,7 @@ export function Login() {
 
             <MDBCard style={{ minWidth: '25rem' }} >
               <MDBCardBody>
-                <MDBCardTitle>Management Login</MDBCardTitle>
+                <MDBCardTitle>Customer Login</MDBCardTitle>
                 <MDBInput label="Username" className="mt-5 mb-2" icon="envelope" group type="email" validate error="wrong"
                   success="right" value={userName} onChange={(e) => {
                     setUserName(e.target.value)
@@ -108,7 +108,7 @@ export function Login() {
         <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
           &copy; {new Date().getFullYear()} Copyright:{' '}
           
-            Szabist Karachi. Ahmed Hanif & Syed Abdul Rafay 
+            Ahmed Hanif | SZABIST KARACHI |
           
         </div>
       </MDBFooter>

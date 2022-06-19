@@ -8,6 +8,10 @@ export function GetNetworkList(data,token) {
   return apiUtil.getApi("transaction/getNetworkType",token, data)
 }
 
+export function GetNetworkInfo(data,token) {
+  return apiUtil.getApi("transaction/getNetworkInfo",token,data)
+}
+
 
 //export function LinkDonor(data,token) {
 //  return apiUtil.postApi('donor/link/child', token, data)

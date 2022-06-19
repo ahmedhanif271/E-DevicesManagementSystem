@@ -24,13 +24,13 @@ import {
   useMatch
 } from "react-router-dom";
 
-import { DeviceList } from './DeviceList';
+import { DetailList } from './DetailList';
 
-export function DeviceDetail() {
+export function MyDetail() {
 
   return (
     <Routes >
-    <Route path={`/`} element={ <DeviceList />} />
+    <Route path={`/`} element={ <DetailList />} />
     
   </Routes>
   );

@@ -28,33 +28,34 @@ import DataTable from 'react-data-table-component';
 import { getToken, loginAsync } from '../../reducers/AuthSlice'
 
 import { GetMeterList} from '../../api/MeterApis';
-import { GetMeterListAsync, getMeterList} from '../../reducers/MeterSlice'
+import { GetMeterListAsync, getMeterList, getNetworkInfo, GetNetworkInfoAsync} from '../../reducers/MeterSlice'
 import { Link } from 'react-router-dom';
-
 
 const columns = [
   {
-    name: 'Network',
-    selector: row => row.network,
+    name: 'Name',
+    selector: row => row.name,
   },
   {
-    name: 'Entity',
-    selector: row => row.entity,
-  },
+    name: 'IP address',
+    selector: row => row.ip_address,
+   },
   {
-    name: 'Serial',
-    selector: row => row.serial,
+    name: 'Port',
+    selector: row => row.port,
   }
   
 ]
-export function DeviceList() {
+
+export function NetworkList() {
 const dispatch = useDispatch();
   const token = useSelector(getToken);
+  var formData = useSelector(getNetworkInfo);
 
   useEffect(() => {
-    dispatch(GetMeterListAsync({token }));
+    dispatch(GetNetworkInfoAsync({token }));
   }, []);
-  const data = useSelector(getMeterList);
+  const data = useSelector(getNetworkInfo);
   console.log(data)
   return (
     <div className="p-4 text-start ">
@@ -63,15 +64,15 @@ const dispatch = useDispatch();
           <a>Home</a>
         </MDBBreadcrumbItem>
         <MDBBreadcrumbItem active>
-          <a >Connected Devices</a>
+          <a >Network List</a>
         </MDBBreadcrumbItem>
 
       </MDBBreadcrumb>
       <MDBCard alignment='center' >
-        <MDBCardHeader className="text-start"><h5> Connected Devices</h5></MDBCardHeader>
+        <MDBCardHeader className="text-start"><h5> Network List</h5></MDBCardHeader>
         <MDBRow>
           <MDBCardBody>
-            <DataTable
+          <DataTable
               pagination="true"
               columns={columns}
               data={data}

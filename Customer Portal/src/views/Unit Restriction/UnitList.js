@@ -26,36 +26,54 @@ import {
 
 import DataTable from 'react-data-table-component';
 import { getToken, loginAsync } from '../../reducers/AuthSlice'
-
-import { GetMeterList} from '../../api/MeterApis';
-import { GetMeterListAsync, getMeterList} from '../../reducers/MeterSlice'
+import { createUnitsAlertAsync } from '../../reducers/MeterSlice'
 import { Link } from 'react-router-dom';
 
 
 const columns = [
   {
-    name: 'Network',
-    selector: row => row.network,
+    name: 'ID',
+    selector: row => row.ID,
   },
   {
-    name: 'Entity',
-    selector: row => row.entity,
+    name: 'Meter ID',
+    selector: row => row.meterID,
   },
   {
-    name: 'Serial',
-    selector: row => row.serial,
+    name: 'Network ID',
+    selector: row => row.networkID,
+  },
+  {
+    name: 'Units',
+    selector: row => row.units,
+  },
+  {
+    name: 'Phone Number',
+    selector: row => row.phone,
   }
   
 ]
-export function UnitList() {
-const dispatch = useDispatch();
+export const UnitList = (props) => {
   const token = useSelector(getToken);
+  const [formData, setFormData] = useState({});
+  const dispatch = useDispatch();
+  const handleChange = event => {
+    var data = formData;
+    data[event.target.name] = event.target.value;
+    setFormData(data);
+  }
+  const handleDate = event => {
+    var data = formData;
 
-  useEffect(() => {
-    dispatch(GetMeterListAsync({token }));
-  }, []);
-  const data = useSelector(getMeterList);
-  console.log(data)
+    data[event.target.name] = new Date(event.target.value);
+    setFormData(data);
+  }
+
+  const onSubmit = () => {
+
+    dispatch(createUnitsAlertAsync({ formData, token }));
+
+  }
   return (
     <div className="p-4 text-start ">
       <MDBBreadcrumb>
@@ -68,17 +86,38 @@ const dispatch = useDispatch();
 
       </MDBBreadcrumb>
       <MDBCard alignment='center' >
-        <MDBCardHeader className="text-start"><h5> Unit Restriction</h5></MDBCardHeader>
-        <MDBRow>
-          <MDBCardBody>
-            <DataTable
-              pagination="true"
-              columns={columns}
-              data={data}
+        <MDBCardHeader className="text-start"><h5> Units Alert</h5></MDBCardHeader>
 
-            />
-          </MDBCardBody>
+        <MDBCardBody>
+          <MDBCardText lg="4" className='text-start'>Enter the Units to create alert</MDBCardText>
+
+        <MDBRow>
+            <MDBCol lg="4" className="py-1">
+            <MDBInput label="Your ID" icon="envelope" type="text"  error="wrong"
+                        success="right" name="ID" value={formData.ID} onChange={handleChange} />
+                    </MDBCol>
+                    <MDBCol lg="4" className="py-1">
+                    <MDBInput label="Meter ID" icon="envelope" type="text"  error="wrong"
+                        success="right" name="meterID" value={formData.meterID} onChange={handleChange} />
+                    </MDBCol>
+                    <MDBCol lg="4" className="py-1">
+                    <MDBInput label="Network ID" icon="envelope" type="text"  error="wrong"
+                        success="right" name="networkID" value={formData.networkID} onChange={handleChange} />
+                    </MDBCol>
+                    <MDBCol lg="4" className="py-1">
+                    <MDBInput label="Add Units to alert" icon="envelope" type="text"  error="wrong"
+                        success="right" name="units" value={formData.units} onChange={handleChange} />
+                    </MDBCol>     
+                    <MDBCol lg="4" className="py-1">
+                    <MDBInput label="Phone Number" icon="envelope" type="text"  error="wrong"
+                        success="right" name="phone" value={formData.phone} onChange={handleChange} />
+                    </MDBCol>  
+          
         </MDBRow>
+        <div className="text-end w-100">
+                <Link to={"/home/home"}> <MDBBtn color="danger" className="mx-2 my-5">Close</MDBBtn></Link><Link to={"/home/units"}><MDBBtn type={"button"} className="mx-2  my-5" onClick={onSubmit}>Add</MDBBtn></Link>
+                </div>
+        </MDBCardBody>
       </MDBCard>
 
     </div>

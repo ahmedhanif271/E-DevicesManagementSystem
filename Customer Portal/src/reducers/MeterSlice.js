@@ -2,7 +2,11 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { CreateNewProfile, GetCustomerList, GetAvailableProfilesList, LinkDonor, DeLinkDonor } from '../api/CustomerProfileApis';
 import { toast } from 'react-toastify';
 import { MeterList } from '../views/Meter/MeterList';
-import { CreateNewMeter , GetMeterList } from '../api/MeterApis';
+import { CreateNewMeter , GetMeterList, GetMeterInfo, } from '../api/MeterApis';
+import { GetNetworkInfo } from '../api/NetworkApis';
+import { GetMyDetails } from '../api/MyDetailsApis';
+import { GetAnalytics } from '../api/AnalyticsApis';
+import { CreateUnitsAlert } from '../api/UnitsAlertApis';
 
 
 const initialState = {
@@ -11,7 +15,12 @@ const initialState = {
   unAssignedList: [],
   status: 'idle',
   screenMode: 'list',
-  devicetype: []
+  devicetype: [],
+  meterData:[],
+  networkData:[],
+  detailsData:[],
+  analyticsData:[],
+  unitsData:[]
   
 };
 
@@ -38,6 +47,51 @@ export const GetMeterListAsync = createAsyncThunk(
     return response.data;
   }
 );
+
+export const GetMeterInfoAsync = createAsyncThunk(
+  'meterSlice/getdeviceinfo',
+  async (data) => {
+    const response = await GetMeterInfo(data.params, data.token);
+    return response.data;
+    
+  }
+);
+export const GetNetworkInfoAsync = createAsyncThunk(
+  'meterSlice/getnetworkinfo',
+  async (data) => {
+    const response = await GetNetworkInfo(data.params, data.token);
+    return response.data;
+    
+  }
+);
+
+export const GetMyDetailsAsync = createAsyncThunk(
+  'meterSlice/getmydetails',
+  async (data) => {
+    const response = await GetMyDetails(data.params, data.token);
+    return response.data;
+    
+  }
+);
+
+export const GetAnalyticsAsync = createAsyncThunk(
+  'meterSlice/getanalytics',
+  async (data) => {
+    const response = await GetAnalytics(data.params, data.token);
+    return response.data;
+    
+  }
+);
+
+export const createUnitsAlertAsync = createAsyncThunk(
+  'meterSlice/createunitsalert',
+  async (data) => {
+    const response = await CreateUnitsAlert(data.formData, data.token);
+    return response.data;
+    
+  }
+);
+
 
 
 /*export const GetAvailableCustomerProfilesListAsync = createAsyncThunk(
@@ -88,8 +142,42 @@ export const MeterSlice = createSlice({
       .addCase(GetMeterListAsync.fulfilled, (state, action) => {
         state.status = 'idle';
         state.devicetype = action.payload.list
+        
+       })
+       .addCase(GetMeterInfoAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        console.log(action.payload.list, 'data resp')
+        state.meterData= action.payload.list
         // state.profileData = action.payload.token;
-      })//.addCase(GetAvailableCustomerProfilesListAsync.pending, (state, action) => {
+      })
+      .addCase(GetNetworkInfoAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        console.log(action.payload.list, 'data resp')
+        state.networkData= action.payload.list
+        // state.profileData = action.payload.token;
+      })
+      .addCase(GetMyDetailsAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        console.log(action.payload.list, 'data resp')
+        state.detailsData= action.payload.list
+        // state.profileData = action.payload.token;
+      })
+      .addCase(GetAnalyticsAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        console.log(action.payload.list, 'data resp')
+        state.analyticsData= action.payload.list
+        // state.profileData = action.payload.token;
+      })
+      .addCase(createUnitsAlertAsync.pending, (state, action) => {
+        state.status = 'loading';
+      })
+      .addCase(createUnitsAlertAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        toast.success(action.payload.message)
+        // state.profileData = action.payload.token;
+      })
+
+
         //state.status = 'loading';
       //})
       //.addCase(GetAvailableCustomerProfilesListAsync.fulfilled, (state, action) => {
@@ -124,6 +212,16 @@ export const getScreenMode = (state) => state.meterSlice.screenMode;
 //export const getAvailableProfiles = (state) => state.CustomerProfile.unAssignedList;
 
 export const getMeterList = (state) =>state.meterSlice.devicetype;
+
+export const getMeterInfo = (state) =>state.meterSlice.meterData;
+
+export const getNetworkInfo = (state) =>state.meterSlice.networkData;
+
+export const getMyDetails = (state) =>state.meterSlice.detailsData;
+
+export const getAnalytics = (state) =>state.meterSlice.analyticsData;
+
+export const getUnitsAlert = (state) =>state.meterSlice.unitsData;
 
 
 // We can also write thunks by hand, which may contain both sync and async logic.
