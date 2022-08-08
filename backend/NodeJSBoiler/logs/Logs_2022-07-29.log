@@ -1,0 +1,11 @@
+23:07:07.077 | Info | '/api/user/login' | 
+23:07:11.543 | Info | '/transaction/getAnalytics' | 
+23:07:14.208 | Info | '/transaction/getAnalytics' | 
+23:07:17.586 | Info | '/transaction/getAnalytics' | 
+23:10:12.643 | Info | '/transaction/getAnalytics' | 
+23:11:43.745 | Info | '/transaction/getAnalytics' | 
+23:11:50.583 | Info | '/transaction/getAnalytics' | 
+23:11:53.204 | Info | '/transaction/getAnalytics' | 
+23:11:55.635 | Info | '/transaction/getMyDetails' | 
+23:11:57.201 | Info | '/transaction/getAnalytics' | 
+23:12:07.616 | Info | '/transaction/getDeviceType' | 

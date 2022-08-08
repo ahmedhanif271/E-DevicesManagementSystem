@@ -6,8 +6,7 @@ class BillHistory
     async getBillHistory(message)
     {
     
-        var results=await client.Query("Select * from bills where entity_Id = ? ",
-        [message.API_USER_ID]);
+        var results=await client.Query("Select * from bills where meterId=3",[]);
         return results && results.length>0?results:[];
     }
 

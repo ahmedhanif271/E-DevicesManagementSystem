@@ -7,6 +7,7 @@ import { GetNetworkInfo } from '../api/NetworkApis';
 import { GetMyDetails } from '../api/MyDetailsApis';
 import { GetAnalytics } from '../api/AnalyticsApis';
 import { CreateUnitsAlert } from '../api/UnitsAlertApis';
+import { GetBillsHistory } from '../api/BillsApis';
 
 
 const initialState = {
@@ -20,7 +21,8 @@ const initialState = {
   networkData:[],
   detailsData:[],
   analyticsData:[],
-  unitsData:[]
+  unitsData:[], 
+  billData:[]
   
 };
 
@@ -91,6 +93,16 @@ export const createUnitsAlertAsync = createAsyncThunk(
     
   }
 );
+
+export const GetBillsHistoryAsync = createAsyncThunk(
+  'meterSlice/getbills',
+  async (data) => {
+    const response = await GetBillsHistory(data.params, data.token);
+    return response.data;
+    
+  }
+);
+
 
 
 
@@ -176,6 +188,14 @@ export const MeterSlice = createSlice({
         toast.success(action.payload.message)
         // state.profileData = action.payload.token;
       })
+    .addCase(GetBillsHistoryAsync.pending, (state, action) => {
+      state.status = 'loading';
+    })
+    .addCase(GetBillsHistoryAsync.fulfilled, (state, action) => {
+      state.status = 'idle';
+      state.billData = action.payload.list
+      
+     })
 
 
         //state.status = 'loading';
@@ -222,6 +242,8 @@ export const getMyDetails = (state) =>state.meterSlice.detailsData;
 export const getAnalytics = (state) =>state.meterSlice.analyticsData;
 
 export const getUnitsAlert = (state) =>state.meterSlice.unitsData;
+
+export const getBills = (state) =>state.meterSlice.billData;
 
 
 // We can also write thunks by hand, which may contain both sync and async logic.

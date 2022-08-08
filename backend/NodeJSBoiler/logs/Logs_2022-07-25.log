@@ -1,0 +1,13 @@
+01:55:11.076 | Info | '/api/user/login' | 
+01:55:17.979 | Info | '/transaction/getDeviceType' | 
+01:55:35.902 | Info | '/transaction/getNetworkInfo' | 
+01:55:38.767 | Info | '/transaction/getMeterInfo' | 
+01:55:41.902 | Info | '/transaction/getMyDetails' | 
+01:55:45.356 | Info | '/transaction/getAnalytics' | 
+02:01:58.300 | Info | '/transaction/getAnalytics' | 
+02:02:03.943 | Info | '/transaction/getMyDetails' | 
+02:02:05.322 | Info | '/transaction/getAnalytics' | 
+02:03:32.151 | Info | '/transaction/getAnalytics' | 
+02:03:34.690 | Info | '/transaction/getAnalytics' | 
+02:03:42.977 | Info | '/transaction/getAnalytics' | 
+02:04:01.967 | Info | '/transaction/getAnalytics' | 

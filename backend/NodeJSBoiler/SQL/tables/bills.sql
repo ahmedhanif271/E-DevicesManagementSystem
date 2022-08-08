@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2022 at 11:03 AM
+-- Generation Time: Jul 16, 2022 at 11:02 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -31,9 +31,17 @@ CREATE TABLE `bills` (
   `ID` int(15) NOT NULL,
   `meterID` varchar(15) NOT NULL,
   `month` date NOT NULL,
-  `bill` int(15) NOT NULL,
-  `entity_id` int(15) NOT NULL
+  `lastlogId` int(11) NOT NULL,
+  `currentcounter` int(11) NOT NULL,
+  `amount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bills`
+--
+
+INSERT INTO `bills` (`ID`, `meterID`, `month`, `lastlogId`, `currentcounter`, `amount`) VALUES
+(5, '95547', '2022-06-30', 23568, 456, 25120);
 
 --
 -- Indexes for dumped tables
@@ -53,7 +61,7 @@ ALTER TABLE `bills`
 -- AUTO_INCREMENT for table `bills`
 --
 ALTER TABLE `bills`
-  MODIFY `ID` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

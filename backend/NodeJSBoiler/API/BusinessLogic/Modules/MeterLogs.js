@@ -1,7 +1,7 @@
 const dbmgr=require('../../../custom_modules/dbInstance');
 var client=dbmgr.getDbClient();
 
-class PollType
+class MeterLogs
 {
     async createPollType(message)
     {
@@ -17,6 +17,21 @@ class PollType
         []);
         return results && results.length>0?results:[];
     }
+    
+    async  getlastLogByID(id)
+    {
+    
+        var results=await client.Query("Select * from meterlogs Where meterId=? ORDER BY ID DESC ",
+        [id]);
+        return results && results.length>0?results[0]:null;
+    }
+    async getLogByID(id)
+    {
+        
+        var results=await client.Query("Select * from meterlogs Where id=? ",
+        [id]);
+        return results && results.length>0?results[0]:null;
+    }
 
 }
-module.exports=new PollType();
+module.exports=new MeterLogs();

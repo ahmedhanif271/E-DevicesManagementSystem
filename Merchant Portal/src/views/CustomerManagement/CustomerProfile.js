@@ -149,7 +149,7 @@ export const CustomerProfile = (props) => {
       />
     </MDBCol>
     
-  </MDBRow>
+  </MDBRow> 
 </form>
 
 

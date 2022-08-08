@@ -183,4 +183,14 @@ module.exports = {
         allowedMethod: ['POST']
     },
 
+    "/transaction/getGenerateBills": {
+        controller: "GetGenerateBills",
+        allowedMethod: ['GET']
+    },
+
+    "/transaction/createGenerateBills": {
+        controller: "CreateGenerateBills",
+        allowedMethod: ['POST']
+    },
+
 }
