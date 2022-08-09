@@ -32,6 +32,7 @@ import {
   BrowserRouter as Router, Routes, Route, Link, useParams,
   useMatch
 } from "react-router-dom";
+import { ComplaintsConfiguration } from './Reports/ComplaintsConfiguration';
 
 export function Landing() {
 
@@ -73,7 +74,7 @@ export function Landing() {
             </div>
             <div className="custom-sidebar-menu-item">
             <div className="custom-sidebar-menu-item-inner">
-              Reports
+            <Link to={`/home/reports`} > Reports </Link> 
             </div>
           </div>
           </div>
@@ -89,6 +90,7 @@ export function Landing() {
             <Route path={`meter-config/*`} element={ <MeterConfiguration />} />
             <Route path={`network-config/*`} element={ <NetworkConfiguration />} />
             <Route path={`user-config/*`} element={ <UserConfiguration />} />
+            <Route path={`reports/*`} element={ <ComplaintsConfiguration />} />
 
           </Routes>
 

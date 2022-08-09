@@ -193,4 +193,14 @@ module.exports = {
         allowedMethod: ['POST']
     },
 
+    "/transaction/createComplaintsType": {
+        controller: "CreateComplaintsType",
+        allowedMethod: ['POST']
+    },
+
+    "/transaction/getComplaintsType": {
+        controller: "GetComplaintsType",
+        allowedMethod: ['GET']
+    },
+
 }

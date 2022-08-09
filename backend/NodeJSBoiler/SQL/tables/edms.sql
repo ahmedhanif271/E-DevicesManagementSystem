@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2022 at 12:41 PM
+-- Generation Time: Aug 08, 2022 at 09:38 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -30,10 +30,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `bills` (
   `ID` int(15) NOT NULL,
   `meterID` varchar(15) NOT NULL,
-  `month` date NOT NULL,
-  `bill` int(15) NOT NULL,
-  `entity_id` int(15) NOT NULL
+  `lastlogId` int(11) DEFAULT NULL,
+  `currentcounter` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `createdon` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bills`
+--
+
+INSERT INTO `bills` (`ID`, `meterID`, `lastlogId`, `currentcounter`, `amount`, `createdon`) VALUES
+(1, '3', NULL, 456, 8930, '2022-01-01'),
+(2, '3', 456, 1002, 19000, '2022-02-01');
 
 -- --------------------------------------------------------
 
@@ -75,6 +84,27 @@ CREATE TABLE `channels` (
 INSERT INTO `channels` (`channelId`, `channelname`, `Abbr`) VALUES
 (5, 'Web', 'WEB'),
 (6, 'Backoffice', 'BO');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `complaints`
+--
+
+CREATE TABLE `complaints` (
+  `ID` int(11) NOT NULL,
+  `meterId` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `details` text NOT NULL,
+  `phone` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `complaints`
+--
+
+INSERT INTO `complaints` (`ID`, `meterId`, `name`, `details`, `phone`) VALUES
+(1, 95547, 'Ahmed', 'Power outage since yesterday', 0);
 
 -- --------------------------------------------------------
 
@@ -138,7 +168,11 @@ INSERT INTO `customers` (`id`, `username`, `password`, `cnic`, `phone`, `address
 (17, 'Kashif', '38523', '4230112295345', '03156979999', '16 comm', '1999-08-11', 'M', 455221),
 (18, 'Ashar Ali', 'ewrr1344', '4230112295345', '03156979999', '16 comm', '1995-11-02', 'M', 95547),
 (19, 'Haroon', 'Hariin42312', '42301-1129519-7', '03156979999', '16 comm', '1999-08-22', 'M', 95547),
-(20, 'Ahmedhanif271', 'Hunzala123', '42301-1129519-7', '03102305711', '16 comm', '1999-08-11', 'M', 455221);
+(20, 'Ahmedhanif271', 'Hunzala123', '42301-1129519-7', '03102305711', '16 comm', '1999-08-11', 'M', 455221),
+(21, 'Ahmedhanif271', 'Hunzala123', '4230111295197', '03412917634', '16 comm', '1999-11-08', 'M', 455221),
+(22, 'salman', 'Hunzala123', '4230311295197', '03128410045', '16 comm', '1999-08-11', 'M', 455221),
+(23, 'Ahmedhanif271', 'Hunzala123', '4230111295197', '03332493389', '16 comm', '1999-11-11', 'M', 455221),
+(24, 'Maria', '12345', '42301-1129519-7', '03412917634', '16 comm', '1999-08-11', 'F', 455224);
 
 -- --------------------------------------------------------
 
@@ -179,7 +213,13 @@ INSERT INTO `devicetype` (`ID`, `network`, `entity`, `serial`, `userId`) VALUES
 (8, 'dadavsvw', '32daaca', '1345956', 99782),
 (9, 'dadavsvw', '32daaca', '1345956', 21694),
 (10, 'new', '32daaca', '1345956', 23450),
-(11, 'dadavsvw', '830pm', '1345956', 0);
+(11, 'dadavsvw', '830pm', '1345956', 0),
+(12, 'Ashfaque', '32daaca', '1345956', 0),
+(13, 'dadavsvw', '32daaca', '1345956', 0),
+(14, 'dadavsvw', '32daaca', '1345956', 0),
+(15, 'dadavsvw', '32daaca', '1345956', 0),
+(16, 'dadavsvw', '32daaca', '1345956', 0),
+(17, 'dadavsvw', '32daaca', '1345956', 0);
 
 -- --------------------------------------------------------
 
@@ -212,11 +252,18 @@ CREATE TABLE `meterlogs` (
 --
 
 INSERT INTO `meterlogs` (`id`, `meterId`, `voltage`, `current`, `kwh`, `createdon`, `amount`) VALUES
-(44799, 192475, 568, 472, 893, '01:00:00', 25120),
-(44800, 192475, 600, 500, 912, '02:00:00', 32572),
-(44801, 192475, 510, 450, 852, '03:00:00', 23014),
-(44802, 192475, 700, 625, 1000, '04:00:00', 52000),
-(44803, 192475, 235, 114, 198, '05:00:00', 19000);
+(1, 1, 568, 472, 893, '01:00:00', 8930),
+(2, 1, 689, 423, 785, '02:00:00', 7850),
+(44790, 8, 568, 472, 893, '00:20:22', 0),
+(44799, 10, 568, 472, 893, '01:00:00', 0),
+(44800, 9, 600, 500, 912, '02:00:00', 0),
+(44801, 1, 510, 450, 852, '03:00:00', 8520),
+(44802, 8, 700, 625, 1000, '04:00:00', 0),
+(44803, 12, 235, 114, 198, '05:00:00', 0),
+(44804, 3, 100, 150, 350, '00:00:01', 0),
+(44805, 4, 510, 114, 198, '00:20:22', 0),
+(44806, 3, 100, 150, 350, '00:00:01', 0),
+(44807, 4, 510, 114, 198, '00:20:22', 0);
 
 -- --------------------------------------------------------
 
@@ -246,7 +293,8 @@ INSERT INTO `networktype` (`id`, `name`, `ip_address`, `port`, `userId`) VALUES
 (7, 'fiberlink', '192.168.0.105', '3320', 11254),
 (8, 'Mern', '192.168.0.120', '120', 95547),
 (9, 'samad', '192.168.0.111', '420', 95547),
-(10, 'pern', '55.236.158.198', '21', 95547);
+(10, 'pern', '55.236.158.198', '21', 95547),
+(11, 'samad', '123.147.200.300', '450', 455221);
 
 -- --------------------------------------------------------
 
@@ -318,7 +366,8 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`ID`, `name`, `role`) VALUES
 (1, 'Admin', ''),
 (6, 'Test', 'Technical support'),
-(7, 'admin', 'admin');
+(7, 'admin', 'admin'),
+(8, 'Muhammad Ahmed Hanif', 'admin');
 
 -- --------------------------------------------------------
 
@@ -333,6 +382,16 @@ CREATE TABLE `unit` (
   `units` int(15) NOT NULL,
   `phone` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `unit`
+--
+
+INSERT INTO `unit` (`ID`, `meterID`, `networkID`, `units`, `phone`) VALUES
+(44975, '952145', 7754334, 239, 2147483647),
+(112356, '95547', 1154789, 100, 304),
+(1812142, '556699422', 2336998, 50, 2147483647),
+(112236789, '2334689', 223499266, 100, 2147483647);
 
 -- --------------------------------------------------------
 
@@ -390,6 +449,12 @@ ALTER TABLE `centers`
 --
 ALTER TABLE `channels`
   ADD PRIMARY KEY (`channelId`);
+
+--
+-- Indexes for table `complaints`
+--
+ALTER TABLE `complaints`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `connecteddevices`
@@ -477,7 +542,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bills`
 --
 ALTER TABLE `bills`
-  MODIFY `ID` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=482;
 
 --
 -- AUTO_INCREMENT for table `centers`
@@ -490,6 +555,12 @@ ALTER TABLE `centers`
 --
 ALTER TABLE `channels`
   MODIFY `channelId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `complaints`
+--
+ALTER TABLE `complaints`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `connecteddevices`
@@ -507,7 +578,7 @@ ALTER TABLE `countersequence`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `customersdetails`
@@ -519,7 +590,7 @@ ALTER TABLE `customersdetails`
 -- AUTO_INCREMENT for table `devicetype`
 --
 ALTER TABLE `devicetype`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `meterdetails`
@@ -531,13 +602,13 @@ ALTER TABLE `meterdetails`
 -- AUTO_INCREMENT for table `meterlogs`
 --
 ALTER TABLE `meterlogs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44804;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44808;
 
 --
 -- AUTO_INCREMENT for table `networktype`
 --
 ALTER TABLE `networktype`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `permissions`
@@ -555,13 +626,13 @@ ALTER TABLE `rolemappermission`
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `unit`
 --
 ALTER TABLE `unit`
-  MODIFY `ID` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112236790;
 
 --
 -- AUTO_INCREMENT for table `users`

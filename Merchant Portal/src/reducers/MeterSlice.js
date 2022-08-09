@@ -3,6 +3,7 @@ import { CreateNewProfile, GetCustomerList, GetAvailableProfilesList, LinkDonor,
 import { toast } from 'react-toastify';
 import { MeterList } from '../views/Meter/MeterList';
 import { CreateNewMeter , GetMeterList } from '../api/MeterApis';
+import { GetComplaints } from '../api/ComplaintsApis';
 
 
 const initialState = {
@@ -11,7 +12,8 @@ const initialState = {
   unAssignedList: [],
   status: 'idle',
   screenMode: 'list',
-  devicetype: []
+  devicetype: [],
+  complaintsList: [],
   
 };
 
@@ -39,6 +41,16 @@ export const GetMeterListAsync = createAsyncThunk(
   }
 );
 
+export const GetComplaintsAsync = createAsyncThunk(
+  'meterSlice/getcomplaints',
+  async (data) => {
+   
+    const response = await GetComplaints(data.formData, data.token);
+    console.log("res :", response)
+    return response.data;
+    
+  }
+);
 
 /*export const GetAvailableCustomerProfilesListAsync = createAsyncThunk(
   'customerProfile/list/available',
@@ -89,7 +101,16 @@ export const MeterSlice = createSlice({
         state.status = 'idle';
         state.devicetype = action.payload.list
         // state.profileData = action.payload.token;
-      })//.addCase(GetAvailableCustomerProfilesListAsync.pending, (state, action) => {
+      })
+      
+      .addCase(GetComplaintsAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        state.complaintsList = action.payload.list
+        // state.profileData = action.payload.token;
+      })
+      
+      
+      //.addCase(GetAvailableCustomerProfilesListAsync.pending, (state, action) => {
         //state.status = 'loading';
       //})
       //.addCase(GetAvailableCustomerProfilesListAsync.fulfilled, (state, action) => {
@@ -124,6 +145,8 @@ export const getScreenMode = (state) => state.meterSlice.screenMode;
 //export const getAvailableProfiles = (state) => state.CustomerProfile.unAssignedList;
 
 export const getMeterList = (state) =>state.meterSlice.devicetype;
+
+export const getComplaints = (state) =>state.meterSlice.complaintsList;
 
 
 // We can also write thunks by hand, which may contain both sync and async logic.

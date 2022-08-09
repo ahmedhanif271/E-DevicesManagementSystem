@@ -8,6 +8,7 @@ import { GetMyDetails } from '../api/MyDetailsApis';
 import { GetAnalytics } from '../api/AnalyticsApis';
 import { CreateUnitsAlert } from '../api/UnitsAlertApis';
 import { GetBillsHistory } from '../api/BillsApis';
+import { CreateComplaints } from '../api/ComplaintsApis';
 
 
 const initialState = {
@@ -98,6 +99,15 @@ export const GetBillsHistoryAsync = createAsyncThunk(
   'meterSlice/getbills',
   async (data) => {
     const response = await GetBillsHistory(data.params, data.token);
+    return response.data;
+    
+  }
+);
+
+export const createComplaintsAsync = createAsyncThunk(
+  'meterSlice/createcomplaints',
+  async (data) => {
+    const response = await CreateComplaints(data.formData, data.token);
     return response.data;
     
   }
@@ -195,7 +205,14 @@ export const MeterSlice = createSlice({
       state.status = 'idle';
       state.billData = action.payload.list
       
-     })
+     }).addCase(createComplaintsAsync.pending, (state, action) => {
+      state.status = 'loading';
+    })
+    .addCase(createComplaintsAsync.fulfilled, (state, action) => {
+      state.status = 'idle';
+      toast.success(action.payload.message)
+      // state.profileData = action.payload.token;
+    })
 
 
         //state.status = 'loading';

@@ -30,11 +30,13 @@ import { NetworkList } from './Network/NetworkList';
 import { UnitDetail } from './Unit Restriction/UnitConfiguration';
 import { BillsDetail } from './Bills/BillsConfiguration';
 import { MyDetail } from './MyDetail/DetailConfiguration';
+import { ComplaintsDetail } from './Complaints/ComplaintsConfiguration';
 
 import {
   BrowserRouter as Router, Routes, Route, Link, useParams,
   useMatch
 } from "react-router-dom";
+import { ComplaintsSetup } from './Complaints/ComplaintsSetup';
 
 export function Landing() {
 
@@ -77,7 +79,13 @@ export function Landing() {
             <div className="custom-sidebar-menu-item-inner">
               <Link to={`/home/bills-config`} >Bills</Link>
             </div>
-          </div>   
+          </div>  
+
+          <div className="custom-sidebar-menu-item">
+            <div className="custom-sidebar-menu-item-inner">
+              <Link to={`/home/complaints`} >Complaints</Link>
+            </div>
+          </div>    
           
         </div>
         <div className="custom-sidebar-content">
@@ -92,6 +100,7 @@ export function Landing() {
             <Route path={`network-detail/*`} element={ <NetworkList />} />
             <Route path={`unit-config/*`} element={ <UnitDetail />} />
             <Route path={`bills-config/*`} element={ <BillsDetail />} />
+            <Route path={`complaints/*`} element={ <ComplaintsSetup />} />
           </Routes>
 
         </div>
