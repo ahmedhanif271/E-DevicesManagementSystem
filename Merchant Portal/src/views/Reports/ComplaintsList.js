@@ -68,14 +68,14 @@ const dispatch = useDispatch();
           <a>Home</a>
         </MDBBreadcrumbItem>
         <MDBBreadcrumbItem active>
-          <a >Meter List</a>
+          <a >Current Reports</a>
         </MDBBreadcrumbItem>
 
       </MDBBreadcrumb>
       <MDBCard alignment='center' >
-        <MDBCardHeader className="text-start"><h5> Meter Management</h5></MDBCardHeader>
+        <MDBCardHeader className="text-start"><h5> Report Management</h5></MDBCardHeader>
         <div className="w-100 d-flex p-4 justify-content-end" >
-        <Link to={"/home/meter-config/add"}><MDBBtn>Add New</MDBBtn></Link>
+       
         </div>
         <MDBRow>
           <MDBCardBody>

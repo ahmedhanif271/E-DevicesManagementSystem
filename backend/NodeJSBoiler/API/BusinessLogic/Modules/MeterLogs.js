@@ -21,14 +21,28 @@ class MeterLogs
     async  getlastLogByID(id)
     {
     
-        var results=await client.Query("Select * from meterlogs Where meterId=? ORDER BY ID DESC ",
+        var results=await client.Query("Select * from meterlogs Where meterId=1 ORDER BY id DESC ",
         [id]);
         return results && results.length>0?results[0]:null;
     }
     async getLogByID(id)
     {
         
-        var results=await client.Query("Select * from meterlogs Where id=? ",
+        var results=await client.Query("Select * from meterlogs WHERE id=?  ",
+        [id]); 
+        return results && results.length>0?results[0]:null;
+    }
+    async getMeterID(id)
+    {
+        
+        var results=await client.Query("Select meterID from bills ",
+        [id]);
+        return results && results.length>0?results[0]:null;
+    }
+    async getCreatedonByID(id)
+    {
+        
+        var results=await client.Query("Select createdon from bills Where meterId=?  ",
         [id]);
         return results && results.length>0?results[0]:null;
     }

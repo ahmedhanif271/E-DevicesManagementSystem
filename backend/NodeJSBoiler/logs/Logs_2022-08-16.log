@@ -1,0 +1,8 @@
+00:07:38.236 | Info | '/transaction/getCustomerType' | 
+00:07:42.311 | Info | '/transaction/getCustomersDetails' | 
+00:10:09.336 | Info | '/transaction/getNetworkInfo' | 
+00:10:19.936 | Info | '/transaction/getComplaintsType' | 
+00:12:19.964 | Info | '/transaction/getCustomerType' | 
+00:12:25.152 | Info | '/transaction/getCustomersDetails' | 
+00:13:38.806 | Info | '/transaction/createUnitsAlert' | 
+00:16:29.505 | Info | '/transaction/getAnalytics' | 

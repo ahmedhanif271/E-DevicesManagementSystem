@@ -155,8 +155,67 @@ export const CustomerProfile = (props) => {
 
 </div>
                   </MDBTabsPane>
-                  <MDBTabsPane show={fillActive === 'tab3'}>< CustomerBill details={{}} /></MDBTabsPane>
+                  <MDBTabsPane show={fillActive === 'tab3'}>
+
+                  <div className="p-4 text-start w-100 ">
+
+<form>
+  <MDBRow >
+    <MDBCol size='4' >
+      <MDBInput className="mt-3 " label="Username" type="text" value={formData.username} disabled style={{ backgroundColor: "#39C0ED" }}
+      />
+    <MDBInput className="mt-3" label="Bill Status" type="text " value={"Paid"}  disabled style={{ backgroundColor: "#39C0ED" }}
+      />
+       <MDBInput className="mt-3" label="Month" type="text" value={"June"} disabled style={{ backgroundColor: "#39C0ED" }}
+      />
+       <MDBInput className="mt-3" label="Amount" type="text" value={"25678"} disabled style={{ backgroundColor: "#39C0ED" }}
+      />
+    </MDBCol>
+
+    <MDBCol size='4' >
+      <MDBInput className="mt-3 " label="Username" type="text" value={formData.username} disabled style={{ backgroundColor: "#00B74A" }}
+      />
+    <MDBInput className="mt-3" label="Bill Status" type="text " value={"Paid"}  disabled style={{ backgroundColor: "#00B74A" }}
+      />
+       <MDBInput className="mt-3" label="Month" type="text" value={"July"} disabled style={{ backgroundColor: "#00B74A" }}
+      />
+       <MDBInput className="mt-3" label="Amount" type="text" value={"29523"} disabled style={{ backgroundColor: "#00B74A" }}
+      />
+    </MDBCol>
+
+    <MDBCol size='4'>
+      <MDBInput className="mt-3 text-white " label="Username" type="text" value={formData.username} disabled style={{ backgroundColor: "#F93154" }}
+      />
+    <MDBInput className="mt-3 text-white" label="Bill Status" type="text " value={"Not Paid"}  disabled style={{ backgroundColor: "#F93154" }}
+      />
+       <MDBInput className="mt-3 text-white" label="Month" type="text" value={"August"} disabled style={{ backgroundColor: "#F93154" }}
+      />
+       <MDBInput className="mt-3 text-white" label="Amount" type="text" value={"26478"} disabled style={{ backgroundColor: "#F93154" }}
+      />
+    </MDBCol>
+    </MDBRow>
+
+    
+    </form>
+    </div>
+
+
+
+                  </MDBTabsPane>
                   
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
                 </MDBTabsContent>
               </MDBCol>
             

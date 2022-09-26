@@ -7,4 +7,3 @@ function BarAnalytics({ chartData }) {
 }
 
 export default BarAnalytics;
-

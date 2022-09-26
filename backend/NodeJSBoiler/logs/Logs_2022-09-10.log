@@ -1,0 +1,38 @@
+09:16:21.633 | Info | '/transaction/createGenerateBills' | 
+09:16:21.909 | Info | ({}) | 
+09:55:45.705 | Info | '/transaction/createGenerateBills' | 
+09:58:58.281 | Info | '/transaction/createGenerateBills' | 
+09:59:38.225 | Info | '/transaction/createGenerateBills' | 
+10:00:01.702 | Info | '/transaction/createGenerateBills' | 
+10:00:35.975 | Info | '/transaction/createGenerateBills' | 
+10:03:48.174 | Info | '/transaction/createGenerateBills' | 
+10:05:52.055 | Info | '/transaction/createGenerateBills' | 
+10:10:22.033 | Info | '/transaction/createGenerateBills' | 
+10:10:22.174 | Info | ({}) | 
+10:16:12.693 | Info | '/transaction/createGenerateBills' | 
+10:30:13.771 | Info | '/transaction/createGenerateBills' | 
+10:45:39.458 | Info | '/transaction/createGenerateBills' | 
+10:45:41.260 | Info | ({'message':'Unknown column \'lastlogId\' in \'field list\'','code':'ER_BAD_FIELD_ERROR','errno':1054,'sqlState':'42S22','sqlMessage':'Unknown column \'lastlogId\' in \'field list\''}) | 
+10:48:55.711 | Info | '/transaction/createGenerateBills' | 
+10:48:58.010 | Info | ({'message':'Unknown column \'lastlogId\' in \'field list\'','code':'ER_BAD_FIELD_ERROR','errno':1054,'sqlState':'42S22','sqlMessage':'Unknown column \'lastlogId\' in \'field list\''}) | 
+10:50:05.014 | Info | '/transaction/createGenerateBills' | 
+10:50:07.522 | Info | ({'message':'Unknown column \'lastlogId\' in \'field list\'','code':'ER_BAD_FIELD_ERROR','errno':1054,'sqlState':'42S22','sqlMessage':'Unknown column \'lastlogId\' in \'field list\''}) | 
+10:51:44.079 | Info | '/transaction/createGenerateBills' | 
+10:55:08.422 | Info | '/transaction/createGenerateBills' | 
+10:55:20.469 | Info | ({}) | 
+10:57:12.945 | Info | '/transaction/createGenerateBills' | 
+11:00:58.141 | Info | '/transaction/createGenerateBills' | 
+11:04:03.461 | Info | '/transaction/createGenerateBills' | 
+11:07:59.283 | Info | '/transaction/createGenerateBills' | 
+11:09:30.542 | Info | '/transaction/createGenerateBills' | 
+11:10:56.058 | Info | '/transaction/createGenerateBills' | 
+11:11:55.426 | Info | '/transaction/createGenerateBills' | 
+11:14:08.709 | Info | '/transaction/createGenerateBills' | 
+11:19:04.984 | Info | '/transaction/createGenerateBills' | 
+11:20:06.070 | Info | '/transaction/createGenerateBills' | 
+11:22:01.009 | Info | '/transaction/createGenerateBills' | 
+11:24:59.671 | Info | '/transaction/createGenerateBills' | 
+11:25:58.982 | Info | '/transaction/createGenerateBills' | 
+11:26:19.683 | Info | '/transaction/createGenerateBills' | 
+11:29:09.616 | Info | '/transaction/createGenerateBills' | 
+11:29:44.501 | Info | '/transaction/createGenerateBills' | 

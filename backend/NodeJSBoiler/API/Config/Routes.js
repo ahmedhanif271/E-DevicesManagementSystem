@@ -183,13 +183,8 @@ module.exports = {
         allowedMethod: ['POST']
     },
 
-    "/transaction/getGenerateBills": {
-        controller: "GetGenerateBills",
-        allowedMethod: ['GET']
-    },
-
     "/transaction/createGenerateBills": {
-        controller: "CreateGenerateBills",
+        controller: "GetGenerateBills",
         allowedMethod: ['POST']
     },
 
@@ -203,4 +198,8 @@ module.exports = {
         allowedMethod: ['GET']
     },
 
+    "/transaction/getfetchlastBillByMeterId": {
+        controller: "GetGenerateBills",
+        allowedMethod: ['GET']
+    },
 }

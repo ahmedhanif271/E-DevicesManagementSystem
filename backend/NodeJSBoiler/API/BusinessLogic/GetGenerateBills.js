@@ -3,6 +3,8 @@ const DeviceModel = require("./Modules/DeviceType");
 const LogModel = require("./Modules/MeterLogs");
 const MeterLogs = require("./Modules/MeterLogs");
 const GenerateBills = require("./Modules/GenerateBills");
+
+
 class GetGenerateBills
 {
     async input(req,message)
@@ -17,31 +19,43 @@ class GetGenerateBills
        
         for(var i=0;i<message.LIST.length;i++)
         {
-            var bill=await Model.getfetchlastBillByMeterId(message.LIST[i].ID)
+           
+          var bill=await GenerateBills.getfetchlastBillByMeterId(message.LIST[i].ID)
+          console.log(bill, message.LIST[i].ID, "checking bill")
           if(bill)
           {
+            console.log(message.LIST[i].ID, "check message");
             var lastlog = await MeterLogs.getlastLogByID(message.LIST[i].ID);
+        console.log(lastlog, "check lastlog again")
             var billog = lastlog?await MeterLogs.getLogByID(bill.lastlogId):null;
-            console.log(lastlog,billog,bill.meterID,"check");
-            var netKwh=(lastlog?lastlog.kwh:0)-(billog?billog.kwh:0);
+            console.log(billog,bill.lastlogId, "check billog")
+            var MeterID = await MeterLogs.getMeterID(bill.ID);
+            console.log(lastlog, billog,bill.meterID,MeterID,"check1");
+            var netKwh=(lastlog.kwh-billog.kwh);
             var amount=netKwh*10;
-            var createdon = await MeterLogs.getlastLogByID(message.CREATEDON);
+            console.log(netKwh,amount,"Amount & NETKWH")
+           // var createdon = await GenerateBills.createGenerateBills(message.CREATEDON);
+            //var month= (new Date()).getMonth(message.CREATEDON)
+            Model.createGenerateBills({METERID:bill.meterID, LASTLOGID:lastlog?lastlog.id:'',CURRENTCOUNTER:netKwh,AMOUNT:amount})
           }   
 
-          else
+         /* else
           {
+           // var MeterID = await MeterLogs.getMeterID(bill.ID);
             var lastlog = await MeterLogs.getlastLogByID(message.LIST[i].ID);  
-            var netKwh=lastlog?lastlog.kwh:0;
+            var netKwh=lastlog;
             var amount=netKwh*10;
+           // var createdon = await GenerateBills.createGenerateBills(message.CREATEDON);
+            //console.log(createdon, "createdon");
             //var month= (new Date()).getMonth(message.CREATEDON)
-            var createdon = await MeterLogs.getlastLogByID(message.CREATEDON);
             
-          }
-          Model.createGenerateBills({METERID:message.LIST[i].ID,AMOUNT:amount,LASTLOGID:lastlog?lastlog.id:'',CREATEDON:createdon,CURRENTCOUNTER:netKwh})
-        }
+          
+        Model.createGenerateBills({METERID:message.LIST[i].ID, LASTLOGID:lastlog?lastlog.id:'',CURRENTCOUNTER:netKwh,AMOUNT:amount})
+        }*/
+      }
         
        
-       // message.LIST = await Model.getfetchlastBillByMeterId(message)
+       //message.LIST = await Model.getfetchlastBillByMeterId(message)
         message.STATUS="Success";
         
            
@@ -51,7 +65,7 @@ class GetGenerateBills
     async output(res,message)
     {
         res.responseBody.message = "Bill generated Successfully "
-       // res.responseBody.list = message.LIST
+       res.responseBody.list = message.LIST
         res.status=message.STATUS;
     
     }

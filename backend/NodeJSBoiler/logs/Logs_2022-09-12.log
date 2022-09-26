@@ -1,0 +1,69 @@
+00:10:07.766 | Info | '/transaction/getAnalytics' | 
+00:10:27.211 | Info | '/transaction/getAnalytics' | 
+00:12:09.209 | Info | '/transaction/getAnalytics' | 
+00:14:12.632 | Info | '/transaction/createComplaintsType' | 
+00:14:12.871 | Info | '/transaction/getAnalytics' | 
+00:15:47.775 | Info | '/transaction/getMyDetails' | 
+00:58:30.789 | Info | '/api/user/login' | 
+00:58:30.990 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+00:58:33.626 | Info | '/api/user/login' | 
+00:58:33.630 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+00:58:34.640 | Info | '/api/user/login' | 
+00:58:34.644 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+00:58:47.666 | Info | '/api/user/login' | 
+00:58:47.669 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+00:58:54.584 | Info | '/api/user/login' | 
+00:58:54.588 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+00:59:30.748 | Info | '/api/user/login' | 
+00:59:30.751 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+01:00:20.737 | Info | '/api/user/login' | 
+01:00:20.740 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+01:00:21.765 | Info | '/api/user/login' | 
+01:00:21.769 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+01:00:53.218 | Info | '/api/user/login' | 
+01:00:53.226 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+01:01:23.580 | Info | '/api/user/login' | 
+01:01:23.745 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+01:04:45.743 | Info | '/transaction/getAnalytics' | 
+01:12:08.959 | Info | '/api/user/login' | 
+01:12:09.162 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+01:15:43.125 | Info | '/api/user/login' | 
+01:15:43.271 | Info | ({'message':'Table \'edms.users\' doesn\'t exist in engine','code':undefined,'errno':1932,'sqlState':'42S02','sqlMessage':'Table \'edms.users\' doesn\'t exist in engine'}) | 
+01:16:27.140 | Info | '/transaction/getMyDetails' | 
+01:21:35.627 | Info | '/transaction/getCustomerType' | 
+01:27:24.780 | Info | '/api/user/login' | 
+01:27:29.185 | Info | '/transaction/getCustomerType' | 
+01:27:51.044 | Info | '/api/user/login' | 
+01:27:51.078 | Info | '/transaction/getMyDetails' | 
+01:27:53.199 | Info | '/transaction/getAnalytics' | 
+01:27:54.389 | Info | '/transaction/getMyDetails' | 
+01:27:55.711 | Info | '/transaction/getAnalytics' | 
+01:28:33.550 | Info | '/transaction/getCustomerType' | 
+01:28:47.463 | Info | '/transaction/getCustomerType' | 
+01:29:02.088 | Info | '/transaction/getCustomersDetails' | 
+01:29:05.141 | Info | '/transaction/getCustomersDetails' | 
+01:29:09.517 | Info | '/transaction/getCustomerType' | 
+01:29:11.794 | Info | '/transaction/getCustomersDetails' | 
+02:23:04.083 | Info | '/transaction/getCustomerType' | 
+02:23:07.580 | Info | '/transaction/getCustomersDetails' | 
+02:23:11.677 | Info | '/transaction/getDeviceType' | 
+02:23:13.010 | Info | '/transaction/getNetworkType' | 
+02:23:14.094 | Info | '/transaction/getRolesType' | 
+02:23:15.339 | Info | '/transaction/getComplaintsType' | 
+02:23:25.490 | Info | '/transaction/getMyDetails' | 
+02:23:26.511 | Info | '/transaction/getMeterInfo' | 
+02:23:28.198 | Info | '/transaction/getNetworkInfo' | 
+02:23:30.324 | Info | '/transaction/getAnalytics' | 
+02:23:57.431 | Info | '/transaction/createUnitsAlert' | 
+02:35:11.971 | Info | '/transaction/getMyDetails' | 
+02:35:13.839 | Info | '/transaction/getAnalytics' | 
+02:35:45.241 | Info | '/transaction/getAnalytics' | 
+02:36:17.857 | Info | '/transaction/createComplaintsType' | 
+02:36:17.894 | Info | '/transaction/getAnalytics' | 
+02:36:38.874 | Info | '/transaction/getComplaintsType' | 
+02:38:26.102 | Info | '/transaction/createComplaintsType' | 
+02:38:26.158 | Info | '/transaction/getAnalytics' | 
+02:39:14.595 | Info | '/transaction/getCustomerType' | 
+02:39:15.729 | Info | '/transaction/getDeviceType' | 
+02:41:14.980 | Info | '/transaction/getCustomerType' | 
+02:41:17.884 | Info | '/transaction/getCustomersDetails' | 

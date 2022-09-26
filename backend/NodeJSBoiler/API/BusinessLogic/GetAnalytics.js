@@ -15,7 +15,7 @@ class GetAnalytics
     }
     async output(res,message)
     {
-        res.responseBody.message = "Customer details added"
+        res.responseBody.message = "Analytics List Available"
         res.responseBody.list = message.LIST
         res.status=message.STATUS;
     

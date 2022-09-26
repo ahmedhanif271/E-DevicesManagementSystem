@@ -27,30 +27,26 @@ import {
 import DataTable from 'react-data-table-component';
 import { getToken, loginAsync } from '../../reducers/AuthSlice'
 
-import { GetBills} from '../../api/BillsApis';
-import { GetBillsHistoryAsync, getBills} from '../../reducers/MeterSlice'
+import { GetAnalytics} from '../../api/AnalyticsApis';
+import { GetAnalyticsAsync, getAnalytics} from '../../reducers/MeterSlice'
 import { Link } from 'react-router-dom';
 
 const columns = [
   {
-    name: 'Meter ID',
-    selector: row => row.meterID,
+    name: 'Voltage',
+    selector: row => row.VOLTAGE,
+  },
+  {
+    name: 'Current',
+    selector: row => row.CURRENT,
+   },
+  {
+    name: 'Amount',
+    selector: row => row.AMOUNT,
   },
   {
     name: 'Created On',
-    selector: row => row.createdon,
-   },
-  {
-    name: 'Last log ID',
-    selector: row => row.lastlogId,
-  },
-  {
-    name: 'Current Counter',
-    selector: row => row.currentcounter,
-  }, 
-  {
-    name: 'Amount',
-    selector: row => row.amount,
+    selector: row => row.CREATEDON,
   }
   
 ]
@@ -60,12 +56,12 @@ const dispatch = useDispatch();
   const token = useSelector(getToken);
   console.log(token,"token in bill list")
 
-  var formData = useSelector(getBills);
+  var formData = useSelector(getAnalytics);
 
   useEffect(() => {
-    dispatch(GetBillsHistoryAsync({token }));
+    dispatch(GetAnalyticsAsync({token }));
   }, []);
-  const data = useSelector(getBills);
+  const data = useSelector(getAnalytics);
   console.log(data, "check data after token") 
   return (
     <div className="p-4 text-start ">

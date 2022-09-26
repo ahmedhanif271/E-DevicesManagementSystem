@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2022 at 09:38 PM
+-- Generation Time: Sep 11, 2022 at 10:56 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bills` (
   `ID` int(15) NOT NULL,
-  `meterID` varchar(15) NOT NULL,
+  `meterID` int(15) NOT NULL,
   `lastlogId` int(11) DEFAULT NULL,
-  `currentcounter` int(11) NOT NULL,
+  `currentcounter` float NOT NULL,
   `amount` int(11) NOT NULL,
-  `createdon` date NOT NULL
+  `createdon` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -41,8 +41,7 @@ CREATE TABLE `bills` (
 --
 
 INSERT INTO `bills` (`ID`, `meterID`, `lastlogId`, `currentcounter`, `amount`, `createdon`) VALUES
-(1, '3', NULL, 456, 8930, '2022-01-01'),
-(2, '3', 456, 1002, 19000, '2022-02-01');
+(1, 1, NULL, 0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -104,7 +103,12 @@ CREATE TABLE `complaints` (
 --
 
 INSERT INTO `complaints` (`ID`, `meterId`, `name`, `details`, `phone`) VALUES
-(1, 95547, 'Ahmed', 'Power outage since yesterday', 0);
+(1, 95547, 'Ahmed', 'Power outage since yesterday', 0),
+(2, 95547, 'Ahmed', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged', 2147483647),
+(3, 35545, 'Laksh', 'Testing complaints', 2147483647),
+(4, 95547, 'Dr. Irfan', 'voltage problem', 2147483647),
+(5, 95547, 'Awais', 'Power line breakage', 2147483647),
+(6, 95547, 'Rafay', 'Wrong bill', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -172,7 +176,7 @@ INSERT INTO `customers` (`id`, `username`, `password`, `cnic`, `phone`, `address
 (21, 'Ahmedhanif271', 'Hunzala123', '4230111295197', '03412917634', '16 comm', '1999-11-08', 'M', 455221),
 (22, 'salman', 'Hunzala123', '4230311295197', '03128410045', '16 comm', '1999-08-11', 'M', 455221),
 (23, 'Ahmedhanif271', 'Hunzala123', '4230111295197', '03332493389', '16 comm', '1999-11-11', 'M', 455221),
-(24, 'Maria', '12345', '42301-1129519-7', '03412917634', '16 comm', '1999-08-11', 'F', 455224);
+(24, 'Dr. irfan', '12345', '42301-1129519-7', '03412917634', '16 comm', '1992-11-11', 'M', 95547);
 
 -- --------------------------------------------------------
 
@@ -183,6 +187,29 @@ INSERT INTO `customers` (`id`, `username`, `password`, `cnic`, `phone`, `address
 CREATE TABLE `customersdetails` (
   `ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data`
+--
+
+CREATE TABLE `data` (
+  `ID` int(11) NOT NULL,
+  `voltage` int(11) NOT NULL,
+  `current` float NOT NULL,
+  `amount` int(11) NOT NULL,
+  `createdon` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data`
+--
+
+INSERT INTO `data` (`ID`, `voltage`, `current`, `amount`, `createdon`) VALUES
+(1, 244, 0.05, 126, '03:32:44'),
+(3, 244, 0.05, 292, '07:33:55'),
+(4, 243, 0.05, 367, '11:33:55');
 
 -- --------------------------------------------------------
 
@@ -240,10 +267,12 @@ CREATE TABLE `meterdetails` (
 CREATE TABLE `meterlogs` (
   `id` int(11) NOT NULL,
   `meterId` int(11) NOT NULL,
+  `lastlogId` int(11) DEFAULT NULL,
+  `createdon` date NOT NULL,
   `voltage` int(11) NOT NULL,
   `current` int(11) NOT NULL,
   `kwh` int(11) NOT NULL,
-  `createdon` time NOT NULL,
+  `time` time NOT NULL,
   `amount` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -251,19 +280,14 @@ CREATE TABLE `meterlogs` (
 -- Dumping data for table `meterlogs`
 --
 
-INSERT INTO `meterlogs` (`id`, `meterId`, `voltage`, `current`, `kwh`, `createdon`, `amount`) VALUES
-(1, 1, 568, 472, 893, '01:00:00', 8930),
-(2, 1, 689, 423, 785, '02:00:00', 7850),
-(44790, 8, 568, 472, 893, '00:20:22', 0),
-(44799, 10, 568, 472, 893, '01:00:00', 0),
-(44800, 9, 600, 500, 912, '02:00:00', 0),
-(44801, 1, 510, 450, 852, '03:00:00', 8520),
-(44802, 8, 700, 625, 1000, '04:00:00', 0),
-(44803, 12, 235, 114, 198, '05:00:00', 0),
-(44804, 3, 100, 150, 350, '00:00:01', 0),
-(44805, 4, 510, 114, 198, '00:20:22', 0),
-(44806, 3, 100, 150, 350, '00:00:01', 0),
-(44807, 4, 510, 114, 198, '00:20:22', 0);
+INSERT INTO `meterlogs` (`id`, `meterId`, `lastlogId`, `createdon`, `voltage`, `current`, `kwh`, `time`, `amount`) VALUES
+(1, 1, 0, '2022-07-01', 568, 472, 893, '01:00:00', 8930),
+(2, 1, 1123, '2022-05-01', 689, 423, 785, '02:00:00', 7850),
+(44799, 95547, 0, '0000-00-00', 568, 472, 893, '01:00:00', 0),
+(44801, 1, 2515, '2022-06-01', 510, 450, 852, '03:00:00', 8520),
+(44803, 95547, 0, '0000-00-00', 235, 114, 198, '05:00:00', 0),
+(44804, 3, 0, '0000-00-00', 100, 150, 350, '00:00:01', 0),
+(44806, 3, 0, '0000-00-00', 100, 150, 350, '00:00:01', 0);
 
 -- --------------------------------------------------------
 
@@ -389,6 +413,7 @@ CREATE TABLE `unit` (
 
 INSERT INTO `unit` (`ID`, `meterID`, `networkID`, `units`, `phone`) VALUES
 (44975, '952145', 7754334, 239, 2147483647),
+(95547, '123', 123, 123, 2147483647),
 (112356, '95547', 1154789, 100, 304),
 (1812142, '556699422', 2336998, 50, 2147483647),
 (112236789, '2334689', 223499266, 100, 2147483647);
@@ -481,6 +506,12 @@ ALTER TABLE `customersdetails`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `data`
+--
+ALTER TABLE `data`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `devicetype`
 --
 ALTER TABLE `devicetype`
@@ -542,7 +573,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bills`
 --
 ALTER TABLE `bills`
-  MODIFY `ID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=482;
+  MODIFY `ID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=654;
 
 --
 -- AUTO_INCREMENT for table `centers`
@@ -560,7 +591,7 @@ ALTER TABLE `channels`
 -- AUTO_INCREMENT for table `complaints`
 --
 ALTER TABLE `complaints`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `connecteddevices`
@@ -585,6 +616,12 @@ ALTER TABLE `customers`
 --
 ALTER TABLE `customersdetails`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `data`
+--
+ALTER TABLE `data`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `devicetype`

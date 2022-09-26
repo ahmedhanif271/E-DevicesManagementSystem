@@ -36,7 +36,6 @@ import { GetAnalyticsAsync, getAnalytics} from '../../reducers/MeterSlice'
 
 
 
-
 export function Dashboard() {
   const dispatch = useDispatch();
   const token = useSelector(getToken);
@@ -44,23 +43,22 @@ export function Dashboard() {
     dispatch(GetAnalyticsAsync({token }));
   }, []);
 
-
-  
+ // console.log(GetAnalytics, "checking GetAnalytics");
   
 
   const Data1 = useSelector(getAnalytics);
-  console.log(Data1, "hey22y")
+  console.log(Data1, "DATA 1")
 
-  var valMap=Data1?Data1.map((data) => data.AMOUNT):[];
+  var valMap=Data1?Data1.map((data) => data.CURRENT):[];
   var lblMap=Data1?Data1.map((data) => data.CREATEDON):[];
   
-  console.log(valMap)
+  console.log(valMap,"ValMap and Lblmap")
   const [BillChart, setData1] = useState({
     labels: lblMap,
     
     datasets: [
       {
-        label: "Bill by Hour",
+        label: "CURRENT",
         data:valMap ,
         backgroundColor: [
           "rgba(0,0,255)",
@@ -78,13 +76,13 @@ export function Dashboard() {
 
   var valMap=Data1?Data1.map((data) => data.VOLTAGE):[];
   var lblMap=Data1?Data1.map((data) => data.CREATEDON):[];
-  console.log(valMap)
+ // console.log(valMap)
   const [VoltageChart, setData2] = useState({
     labels: lblMap,
     
     datasets: [
       {
-        label: "Voltage by Hour",
+        label: "VOLTAGE",
         data:valMap ,
         backgroundColor: [
           "rgba(0,0,255)",
@@ -99,7 +97,7 @@ export function Dashboard() {
     ],
   });
 
-  var valMap=Data1?Data1.map((data) => data.CURRENT):[];
+  var valMap=Data1?Data1.map((data) => data.AMOUNT):[];
   var lblMap=Data1?Data1.map((data) => data.CREATEDON):[];
   console.log(valMap)
   const [CurrentChart, setData3] = useState({
@@ -107,7 +105,7 @@ export function Dashboard() {
     
     datasets: [
       {
-        label: "Current by Hour",
+        label: "BILL",
         data:valMap ,
         backgroundColor: [
           "rgba(0,0,255)",
@@ -165,7 +163,6 @@ export function Dashboard() {
       </MDBBreadcrumbItem>
     </MDBBreadcrumb>
 
-
 <MDBBreadcrumb> 
       <MDBBreadcrumbItem>
         <MDBCard alignment="center">
@@ -186,3 +183,4 @@ export function Dashboard() {
 }
 
 export default Dashboard;
+

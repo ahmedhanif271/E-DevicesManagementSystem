@@ -1,0 +1,52 @@
+08:39:41.720 | Info | '/transaction/createGenerateBills' | 
+08:39:52.138 | Info | ({'message':'connect ETIMEDOUT','code':'ETIMEDOUT','errno':undefined,'sqlState':undefined,'sqlMessage':undefined}) | 
+08:40:02.084 | Info | '/transaction/createGenerateBills' | 
+08:40:12.107 | Info | ({'message':'connect ETIMEDOUT','code':'ETIMEDOUT','errno':undefined,'sqlState':undefined,'sqlMessage':undefined}) | 
+08:40:38.883 | Info | '/transaction/createGenerateBills' | 
+08:40:48.895 | Info | ({'message':'connect ETIMEDOUT','code':'ETIMEDOUT','errno':undefined,'sqlState':undefined,'sqlMessage':undefined}) | 
+08:42:08.855 | Info | '/transaction/createGenerateBills' | 
+08:42:19.106 | Info | ({'message':'connect ETIMEDOUT','code':'ETIMEDOUT','errno':undefined,'sqlState':undefined,'sqlMessage':undefined}) | 
+09:23:54.462 | Info | '/transaction/createGenerateBills' | 
+09:24:04.698 | Info | ({'message':'connect ETIMEDOUT','code':'ETIMEDOUT','errno':undefined,'sqlState':undefined,'sqlMessage':undefined}) | 
+09:24:46.336 | Info | '/transaction/createGenerateBills' | 
+09:24:56.603 | Info | ({'message':'connect ETIMEDOUT','code':'ETIMEDOUT','errno':undefined,'sqlState':undefined,'sqlMessage':undefined}) | 
+09:25:41.153 | Info | '/transaction/createGenerateBills' | 
+09:26:12.553 | Info | '/transaction/createGenerateBills' | 
+09:26:13.037 | Info | ({}) | 
+09:37:34.997 | Info | '/transaction/createGenerateBills' | 
+09:37:35.251 | Info | ({}) | 
+09:38:33.288 | Info | '/transaction/createGenerateBills' | 
+09:38:33.620 | Info | ({'message':'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'?,?,?,?)\' at line 1','code':'ER_PARSE_ERROR','errno':1064,'sqlState':'42000','sqlMessage':'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'?,?,?,?)\' at line 1'}) | 
+09:38:59.520 | Info | '/transaction/createGenerateBills' | 
+09:38:59.899 | Info | ({'message':'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'?,?,?,?,?)\' at line 1','code':'ER_PARSE_ERROR','errno':1064,'sqlState':'42000','sqlMessage':'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'?,?,?,?,?)\' at line 1'}) | 
+09:39:24.506 | Info | '/transaction/createGenerateBills' | 
+09:39:24.833 | Info | ({'message':'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'?,?,?,?,?)\' at line 1','code':'ER_PARSE_ERROR','errno':1064,'sqlState':'42000','sqlMessage':'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'?,?,?,?,?)\' at line 1'}) | 
+09:40:06.554 | Info | '/transaction/createGenerateBills' | 
+09:40:06.868 | Info | ({'message':'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'?,?,?,?,?)\' at line 1','code':'ER_PARSE_ERROR','errno':1064,'sqlState':'42000','sqlMessage':'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'?,?,?,?,?)\' at line 1'}) | 
+09:40:47.570 | Info | '/transaction/createGenerateBills' | 
+09:40:47.783 | Info | ({}) | 
+09:48:07.046 | Info | '/transaction/createGenerateBills' | 
+09:48:07.208 | Info | ({}) | 
+09:52:04.190 | Info | '/transaction/createGenerateBills' | 
+09:52:04.296 | Info | ({}) | 
+09:53:29.742 | Info | '/transaction/createGenerateBills' | 
+09:53:29.883 | Info | ({}) | 
+09:53:46.990 | Info | '/transaction/createGenerateBills' | 
+09:53:47.126 | Info | ({}) | 
+09:54:45.439 | Info | '/transaction/createGenerateBills' | 
+09:54:45.584 | Info | ({}) | 
+09:56:19.136 | Info | '/transaction/createGenerateBills' | 
+09:56:19.277 | Info | ({}) | 
+10:02:36.363 | Info | '/transaction/createGenerateBills' | 
+10:02:36.511 | Info | ({}) | 
+10:03:10.963 | Info | '/transaction/createGenerateBills' | 
+10:03:11.108 | Info | ({}) | 
+10:04:49.193 | Info | '/transaction/createGenerateBills' | 
+10:05:46.700 | Info | '/transaction/createGenerateBills' | 
+10:05:46.803 | Info | ({}) | 
+10:06:30.047 | Info | '/transaction/createGenerateBills' | 
+10:06:30.162 | Info | ({}) | 
+10:07:24.232 | Info | '/transaction/createGenerateBills' | 
+10:07:24.390 | Info | ({}) | 
+10:08:22.553 | Info | '/transaction/createGenerateBills' | 
+10:08:22.687 | Info | ({}) | 

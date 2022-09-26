@@ -94,7 +94,7 @@ export function Landing() {
       </div>
           <Routes>
             
-          <Route path={`dashboard/*`} element={ <Dashboard />} />
+          <Route path={`dashboard/*`} element={ <Dashboard/>} />
             <Route path={`my-detail/*`} element={ <MyDetail />} />
             <Route path={`meter-detail/*`} element={ <MeterDetail />} />
             <Route path={`network-detail/*`} element={ <NetworkList />} />

@@ -7,7 +7,7 @@ class Analytics
     async getAnalytics(message)
     {
     
-        var results=await client.Query("Select CURRENT, VOLTAGE, CREATEDON, AMOUNT from meterlogs WHERE meterId=1",[]);
+        var results=await client.Query("Select VOLTAGE, AMOUNT, CREATEDON, CURRENT FROM data");
         return results && results.length>0?results:[];
     }
 

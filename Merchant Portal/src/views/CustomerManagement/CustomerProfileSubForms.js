@@ -76,7 +76,7 @@ const customerData = [
   },
   {
     id: 1,
-    name: 'Abdul Rafay',
+    name: 'dr. Irfan',
     units: '1880',
     month: 'March',
     amount: '9000',

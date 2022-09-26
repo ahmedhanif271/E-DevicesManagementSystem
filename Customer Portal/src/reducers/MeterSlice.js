@@ -188,6 +188,7 @@ export const MeterSlice = createSlice({
         state.status = 'idle';
         console.log(action.payload.list, 'data resp')
         state.analyticsData= action.payload.list
+        console.log(state.analyticsData, "analytics DATA")
         // state.profileData = action.payload.token;
       })
       .addCase(createUnitsAlertAsync.pending, (state, action) => {

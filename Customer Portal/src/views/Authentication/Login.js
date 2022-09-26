@@ -35,7 +35,7 @@ export function Login() {
 
   if (token) {
       //alert("Hello");
-      return <Navigate to={{ pathname: '/home', state: { from: location } }} />
+      return <Navigate to={{ pathname: '/home/my-detail', state: { from: location } }} />
       // setUserName("")
   }
 
